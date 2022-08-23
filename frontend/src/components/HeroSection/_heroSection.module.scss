@@ -1,0 +1,160 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/variables";
+.header {
+  padding: 12rem 0 12rem 0;
+  background-position: center;
+  background-size: cover;
+  @include respond(tab-land) {
+    padding: 10rem 0 10rem 0;
+  }
+  @include respond(tab-port) {
+    padding: 9rem 0 9rem 0;
+  }
+  @include respond(phone) {
+    padding: 9rem 0 9rem 0;
+  }
+  &__1 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/northinoLogo.png");
+  }
+  &__2 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/northinoTVBg.png");
+  }
+  &__3 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/team.jpg");
+  }
+  &__4 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/northinoTech.png");
+  }
+  &__5 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/team.jpg");
+  }
+  &__6 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/northinoLogo.png");
+  }
+  &__7 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/northinoTV.jpg");
+  }
+  &__8 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/northinoLogo.png");
+  }
+  &__9 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/northinoLogo.png");
+  }
+  &__10 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/northinoLogo.png");
+  }
+  &__11 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/northinoLogo.png");
+  }
+  &__12 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/northinoTech.png");
+  }
+  &__13 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/business.png");
+  }
+  &__14 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-tertiary, 0.9),
+        rgba($color-tertiary, 0.9)
+      ),
+      url("../../img/mentor.jpg");
+  }
+}
+.section__about {
+  background-image: linear-gradient(
+      rgba($color-white, 0.9),
+      rgba($color-white, 0.9)
+    ),
+    url("../../img/arewaLogo.png");
+
+  @include respond(tab-land) {
+    background-size: 30rem;
+    padding: 2rem 0;
+    background-position: center;
+  }
+  @include respond(tab-port) {
+    padding: 0;
+    background-position: center;
+  }
+  @include respond(phone) {
+    background-size: 20rem;
+    padding: 0;
+    background-position: center;
+  }
+  @include respond(small-phone) {
+    background-size: 15rem;
+    padding: 0;
+    background-position: center;
+  }
+  &__ourMission {
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}

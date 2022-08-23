@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model customersmessages {
+  id            Int     @id @default(autoincrement())
+  email_address String  @db.VarChar(45)
+  message       String  @db.LongText
+  is_replied    Int     @default(0)
+  message_id    String? @db.VarChar(255)
+  phone_number  String  @db.VarChar(45)
+}
+
+model subscribers {
+  id            Int    @id @default(autoincrement())
+  full_name     String @db.VarChar(255)
+  email_address String @db.VarChar(45)
+}
+
+model northino_tv {
+  id                Int     @id @default(autoincrement())
+  section_type      String? @db.VarChar(45)
+  video_url         String? @db.VarChar(255)
+  video_title       String? @db.VarChar(45)
+  video_description String? @db.VarChar(255)
+}
+
+model request_service_development {
+  id                   Int    @id @default(autoincrement())
+  fullname             String @db.VarChar(255)
+  email                String @db.VarChar(255)
+  phone_number         String @db.VarChar(255)
+  business_name        String @db.VarChar(255)
+  business_type        String @db.VarChar(255)
+  business_description String @db.Text
+}
+
+model request_service_mentor {
+  id              Int    @id @default(autoincrement())
+  fullname        String @db.VarChar(255)
+  email           String @db.VarChar(255)
+  phone_number    String @db.VarChar(255)
+  mentorship_type String @db.VarChar(255)
+  experience      String @db.VarChar(255)
+}
+
+model request_service_promotion {
+  id                   Int    @id @default(autoincrement())
+  fullname             String @db.VarChar(255)
+  email                String @db.VarChar(255)
+  phone_number         String @db.VarChar(255)
+  business_name        String @db.VarChar(255)
+  business_type        String @db.VarChar(255)
+  business_description String @db.Text
+}
+
+model built_projects {
+  id                  Int     @id @default(autoincrement())
+  project_name        String  @db.VarChar(255)
+  project_description String  @db.Text
+  project_link        String  @db.Text
+  project_logo        String? @db.Text
+}
+
+model client_projects {
+  id                  Int    @id @default(autoincrement())
+  client_name         String @db.VarChar(255)
+  project_name        String @db.VarChar(255)
+  project_description String @db.Text
+  project_link        String @db.VarChar(255)
+  project_logo        String @db.Text
+}
+
+model mentors {
+  id              Int     @id @default(autoincrement())
+  mentor_name     String  @db.VarChar(255)
+  mentor_field    String  @db.VarChar(255)
+  mentees_trained String? @db.VarChar(255)
+  mentor_img      String? @db.Text
+}
+
+model promoted_businesses {
+  id                   Int     @id @default(autoincrement())
+  business_name        String? @db.VarChar(255)
+  business_logo        String? @db.VarChar(255)
+  business_description String? @db.VarChar(255)
+}

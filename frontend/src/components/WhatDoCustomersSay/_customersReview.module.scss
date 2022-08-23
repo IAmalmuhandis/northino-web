@@ -1,0 +1,20 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/variables";
+.section__reviews {
+  position: relative;
+  padding-top: 10rem;
+  background-color: $color-primary;
+  margin-top: -6em;
+  z-index: -1;
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+  @include respond(phone) {
+    margin-top: -2rem;
+    padding: 5rem 0;
+  }
+  @include respond(small-phone) {
+    padding: 3rem 0;
+    margin-top: -1.4rem;
+  }
+}

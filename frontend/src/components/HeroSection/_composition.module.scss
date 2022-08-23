@@ -1,0 +1,114 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/variables";
+.composition {
+  position: relative;
+
+  &__photo {
+    width: 55%;
+    //height: 50vh;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: $border-radius-size;
+    position: absolute;
+    z-index: 10;
+    transition: all 1s;
+    outline-offset: 1rem;
+    height: 13rem;
+
+    @include respond(tab-land) {
+      float: right;
+      position: relative;
+      width: 70%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    }
+    @include respond(tab-port) {
+      float: left;
+      position: relative;
+      width: 33.333333%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    }
+    @include respond(phone) {
+      float: left;
+      position: relative;
+      width: 100%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+      height: 10rem;
+    }
+    @include respond(small-phone) {
+      //  display: none;
+      float: left;
+      position: relative;
+      width: 100%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+      height: 10rem;
+    }
+    &__p1 {
+      left: 0;
+      top: -2rem;
+      @include respond(tab-land) {
+        top: 0;
+        transform: scale(1);
+      }
+      @include respond(tab-port) {
+        top: 0;
+        transform: scale(1);
+      }
+      @include respond(phone) {
+        top: -3rem;
+        transform: scale(1);
+        display: none;
+      }
+    }
+    &__p2 {
+      right: -1rem;
+      top: 2rem;
+      @include respond(tab-land) {
+        top: -1rem;
+        right: 0;
+        transform: scale(1);
+        z-index: 100;
+      }
+      @include respond(tab-port) {
+        top: 0;
+        right: 0;
+        transform: scale(1);
+        z-index: 100;
+      }
+      @include respond(phone) {
+        right: 0;
+        top: -2rem;
+        transform: scale(1);
+        display: none;
+      }
+    }
+    &__p3 {
+      left: 20%;
+      top: 10rem;
+      @include respond(tab-land) {
+        top: -1rem;
+        left: 0;
+        transform: scale(1);
+      }
+      @include respond(tab-port) {
+        top: 1rem;
+        left: 0;
+        transform: scale(1);
+      }
+      @include respond(phone) {
+        left: 1%;
+        top: -1rem;
+        transform: scale(1);
+        display: none;
+      }
+    }
+    &:hover {
+      outline: 0.5rem solid $color-primary;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 20;
+    }
+  }
+
+  &:hover &__photo:not(hover) {
+    transform: scale(0.95);
+  }
+}

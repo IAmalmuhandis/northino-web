@@ -1,0 +1,14 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/variables";
+.media__handles {
+  &_icon {
+    height: 3rem;
+    width: 3rem;
+    margin: 0.3rem;
+    @include respond(phone) {
+      height: 2rem;
+      width: 2rem;
+      margin: 0.2rem;
+    }
+  }
+}

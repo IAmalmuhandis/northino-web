@@ -1,0 +1,38 @@
+@import "../../abstracts/variables";
+@import "../../abstracts/mixins";
+.ceo__photo {
+  height: 40rem;
+  border-radius: $border-radius-size;
+  border: solid 3px $color-white;
+  transform: scaleX(-1);
+  @include respond(phone) {
+    height: 20rem;
+  }
+  @include respond(small-phone) {
+    height: 15rem;
+  }
+}
+.ctio__photo {
+  height: 25rem;
+  border-radius: $border-radius-size;
+  border: solid 3px $color-white;
+  //   transform: scaleX(-1);
+  @include respond(phone) {
+    height: 20rem;
+  }
+  @include respond(small-phone) {
+    height: 15rem;
+  }
+}
+.coo__photo {
+  height: 25rem;
+  border-radius: $border-radius-size;
+  border: solid 3px $color-white;
+  //   transform: scaleX(-1);
+  @include respond(phone) {
+    height: 20rem;
+  }
+  @include respond(small-phone) {
+    height: 15rem;
+  }
+}
