@@ -25,23 +25,28 @@ const Navigation = () => {
           </li>
           <li className={classes.navigation__item}>
             <Link to="/northino-tv" className={classes.navigation__link}>
-              Northino TV
-            </Link>
-          </li>
-          <li className={classes.navigation__item}>
-            <Link to="/northino-store" className={classes.navigation__link}>
-              Northino Store
+              Start Learning
             </Link>
           </li>
           <li className={classes.navigation__item}>
             <Link to="/northino-services" className={classes.navigation__link}>
-              Services
+              IT Services
             </Link>
           </li>
 
           <li className={classes.navigation__item}>
+            <Link to="/our-mentors" className={classes.navigation__link}>
+              Get a Mentor
+            </Link>
+          </li>
+          <li className={classes.navigation__item}>
+            <Link to="/tutor-signUp" className={classes.navigation__link}>
+              Become a Tutor
+            </Link>
+          </li>
+          <li className={classes.navigation__item}>
             <Link to="/about-northino" className={classes.navigation__link}>
-              About Us
+              About
             </Link>
           </li>
           <li className={classes.navigation__item}>
@@ -49,10 +54,18 @@ const Navigation = () => {
               Contact Us
             </Link>
           </li>
-          <li
-            className={classes.navigation__item + " " + classes.navigation__btn}
-          >
-            <Button btnText="Subscribe" redirectTo="/subscribe" />
+          <li className={classes.navigation__item}>
+            <Button
+              className={classes.navigation__btn}
+              btnText="SignIn"
+              redirectTo="/signIn"
+            />
+            &nbsp;
+            <Button
+              className={classes.navigation__btn}
+              btnText="SignUp"
+              redirectTo="/signUp"
+            />
           </li>
         </ul>
       </nav>

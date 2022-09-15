@@ -9,18 +9,35 @@ export default function Card2(props) {
   const imgUrl = "../../../img/";
   return (
     <Card className={classes.card} sx={{ maxWidth: 345 }}>
-      <img src={imgUrl + props.cardImage} alt="nhfd" height="140" />
-      {/* <CardMedia
-        className={classes.card__header}
-        component="img"
-        alt={props.imgAlt}
-        height="140"
-        image={cardImg}
-      /> */}
+      {props.type !== "video" ? (
+        <img
+          className={classes.card__img}
+          src={imgUrl + props.cardImage}
+          alt="cover"
+          height="290"
+        />
+      ) : (
+        <iframe
+          className={classes.card__iframe}
+          src={props.url}
+          title={props.title}
+          frameBorder="1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      )}
+
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {props.cardTitle}
         </Typography>
+        {props.type === "mentor" ? (
+          <Typography gutterBottom variant="h6" component="div">
+            {props.EOE}
+          </Typography>
+        ) : (
+          ""
+        )}
         <Typography variant="body2" color="text.secondary">
           {props.cardDesc}
         </Typography>
@@ -46,12 +63,17 @@ export default function Card2(props) {
               ? "/northino-services/business-brandig-and-promotion/businesses-promoted"
               : props.cardName === "mentors" && props.cardNo === "1"
               ? "/northino-services/get-mentor/mentors-list"
+              : props.type === "mentor"
+              ? "/getMentor-form"
               : "/"
           }
         >
           {props.btnText}
         </Link>
-        <Link className={classes.card__link} to="/northino-services">
+        <Link
+          className={classes.card__link}
+          to={props.type !== "video" ? "/northino-services" : "/northino-tv"}
+        >
           Back
         </Link>
       </CardActions>

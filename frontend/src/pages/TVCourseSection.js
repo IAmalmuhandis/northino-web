@@ -1,4 +1,3 @@
-import classes from "./_tvCourseSection.module.scss";
 import Navigation from "../layout/Navigation";
 import "../layout/_grid.scss";
 import "../base/_utilities.scss";
@@ -43,7 +42,7 @@ const TVCourseSection = (props) => {
       ? "11"
       : "";
   return (
-    <div className={classes.course__section}>
+    <div>
       <Navigation />
       <HeroSection pageNo={pageNo} mainHeader={header} subHeader={subHeader} />
       <VideosList course={props.course} />

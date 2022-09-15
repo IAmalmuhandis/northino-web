@@ -1,4 +1,3 @@
-import classes from "./_servicesSelection.module.scss";
 import Navigation from "../layout/Navigation";
 import "../layout/_grid.scss";
 import "../base/_utilities.scss";
@@ -56,7 +55,7 @@ const ServicesSelection = (props) => {
       ? "14"
       : "";
   return (
-    <div className={classes.service__section}>
+    <div>
       <Navigation />
       <HeroSection pageNo={pageNo} mainHeader={header} subHeader={subHeader} />
       <ServiceBody service={props.service} />

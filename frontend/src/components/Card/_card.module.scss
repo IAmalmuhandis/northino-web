@@ -6,8 +6,7 @@
   -moz-perspective: 150rem;
   position: relative;
   height: 52rem;
-  &__btn {
-  }
+
   &__side {
     height: 35rem;
     transition: all 0.8s ease;
@@ -100,12 +99,12 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     &__1 {
-      background-image: url(../../img/northinoTV2.jpg);
+      background-image: url(../../img/northinoTV.jpg);
       background-size: cover;
       background-position: center;
     }
     &__2 {
-      background-image: url(../../img/northinoStore.jpg);
+      background-image: url(../../img/teaching.jpg);
       background-size: cover;
       background-position: center;
     }
@@ -161,13 +160,13 @@
     }
   }
   &__heading {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 300;
     text-transform: uppercase;
     text-align: center;
     color: $color-tertiary;
     position: absolute;
-    top: 12rem;
+    top: 13rem;
     right: 2rem;
     width: 75%;
   }
@@ -241,7 +240,8 @@
     }
   }
   &__details {
-    padding: 3rem;
+    font-weight: 500;
+    padding: 2rem;
     margin-top: 2rem;
     text-align: center;
     color: $color-white;
@@ -496,7 +496,7 @@
       width: 100%;
     }
     &__heading_span {
-      padding: 0.5rem 1.5rem;
+      padding: 1rem 1.5rem;
     }
     &__btn {
       padding: 1rem 1rem !important;
@@ -521,16 +521,18 @@
     }
 
     &__details {
-      padding: 0.5rem 2rem;
+      margin-top: -0.08rem;
+      padding: 0.4rem 2rem;
     }
     // BACK SIDE STYLLING
     &__cta {
       position: relative;
+      font-size: 0.6rem;
       top: 0%;
       left: 0%;
       transform: translate(0);
       width: 100%;
-      padding: 5rem 0 1rem 1rem;
+      padding: 5rem 1rem 1rem 1rem;
       margin: 0 auto;
       text-align: center;
       background-color: $color-primary;
@@ -538,7 +540,8 @@
     &__price_box {
       text-align: center;
       margin-bottom: 0.5rem;
-      margin-left: -1rem;
+      font-size: 0.4rem;
+      // margin-left: -1rem;
       display: flex;
       justify-content: center;
       padding: 1rem;

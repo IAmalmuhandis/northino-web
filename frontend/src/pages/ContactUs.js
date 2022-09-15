@@ -1,4 +1,4 @@
-import classes from "./_contactUs.module.scss";
+import classes from "./styles/_contactUs.module.scss";
 import Navigation from "../layout/Navigation";
 import HeroSection from "../components/HeroSection/HeroSection";
 import Footer from "../layout/Footer";

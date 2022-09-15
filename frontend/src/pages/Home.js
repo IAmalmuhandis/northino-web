@@ -1,5 +1,5 @@
 import Navigation from "../layout/Navigation";
-import classes from "./_home.scss";
+import classes from "./styles/_home.scss";
 import HeroSection from "../components/HeroSection/HeroSection";
 import OurServices from "../components/OurServices/OurServices";
 import OurReports from "../components/OurReport/OurReports";

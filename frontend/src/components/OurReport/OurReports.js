@@ -11,10 +11,10 @@ const OurReports = () => {
       </h2>
       <div className="row">
         <div className="col-1-of-3">
-          <ReportBox heading="Total Projects" details="5" />
+          <ReportBox heading="Available Courses" details="15" />
         </div>
         <div className="col-1-of-3">
-          <ReportBox heading="Total Videos" details="8" />
+          <ReportBox heading="Our Tutors" details="1500" />
         </div>
         <div className="col-1-of-3">
           <ReportBox heading="Total Subscribers" details="1850" />

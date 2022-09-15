@@ -1,21 +1,19 @@
-import classes from "./_videoCard.module.scss";
 import "../../base/_typography.scss";
 import "../../base/_utilities.scss";
 import "../../layout/_grid.scss";
-import { Link } from "react-router-dom";
+import Card from "../Card/Card2";
+
 const VideoCard = (props) => {
   if (props.course === props.section_type) {
     return (
-      <div className={classes.video__card}>
-        <iframe
-          className={classes.video__card_iframe}
-          src={props.url}
-          title={props.title}
-          frameBorder="1"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-        <div className={classes.video__card__body}>
+      <div>
+        <Card
+          url={props.url}
+          cardTitle={props.title}
+          cardDesc={props.description}
+          type="video"
+        />
+        {/* <div className={classes.video__card__body}>
           <h3
             className={
               "heading-tertiary u-margin-bottom-small u-center-text  " +
@@ -40,7 +38,7 @@ const VideoCard = (props) => {
           <Link to="/northino-tv" className={classes.video__card__body_btn2}>
             Return to Category
           </Link>
-        </div>
+        </div> */}
       </div>
     );
   } else {

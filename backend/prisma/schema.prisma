@@ -7,6 +7,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model built_projects {
+  id                  Int    @id @default(autoincrement())
+  project_name        String @db.VarChar(255)
+  project_description String @db.Text
+  team                String @db.VarChar(255)
+}
+
+model client_projects {
+  id                  Int    @id @default(autoincrement())
+  client_name         String @db.VarChar(255)
+  project_name        String @db.VarChar(255)
+  project_description String @db.Text
+}
+
 model customersmessages {
   id            Int     @id @default(autoincrement())
   email_address String  @db.VarChar(45)
@@ -16,10 +30,13 @@ model customersmessages {
   phone_number  String  @db.VarChar(45)
 }
 
-model subscribers {
-  id            Int    @id @default(autoincrement())
-  full_name     String @db.VarChar(255)
-  email_address String @db.VarChar(45)
+model mentors {
+  id                Int     @id @default(autoincrement())
+  name              String  @db.VarChar(255)
+  fieldOfExperience String  @db.VarChar(255)
+  about             String? @db.VarChar(255)
+  picture           String? @default("mentor.jpg") @db.VarChar(255)
+  uniqueId          String? @db.VarChar(255)
 }
 
 model northino_tv {
@@ -59,34 +76,8 @@ model request_service_promotion {
   business_description String @db.Text
 }
 
-model built_projects {
-  id                  Int     @id @default(autoincrement())
-  project_name        String  @db.VarChar(255)
-  project_description String  @db.Text
-  project_link        String  @db.Text
-  project_logo        String? @db.Text
-}
-
-model client_projects {
-  id                  Int    @id @default(autoincrement())
-  client_name         String @db.VarChar(255)
-  project_name        String @db.VarChar(255)
-  project_description String @db.Text
-  project_link        String @db.VarChar(255)
-  project_logo        String @db.Text
-}
-
-model mentors {
-  id              Int     @id @default(autoincrement())
-  mentor_name     String  @db.VarChar(255)
-  mentor_field    String  @db.VarChar(255)
-  mentees_trained String? @db.VarChar(255)
-  mentor_img      String? @db.Text
-}
-
-model promoted_businesses {
-  id                   Int     @id @default(autoincrement())
-  business_name        String? @db.VarChar(255)
-  business_logo        String? @db.VarChar(255)
-  business_description String? @db.VarChar(255)
+model subscribers {
+  id            Int    @id @default(autoincrement())
+  full_name     String @db.VarChar(255)
+  email_address String @db.VarChar(45)
 }

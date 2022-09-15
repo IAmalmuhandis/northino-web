@@ -3,7 +3,6 @@ import "../../base/_typography.scss";
 import "../../layout/_grid.scss";
 import "../../base/_utilities.scss";
 import Grid from "@mui/material/Grid";
-
 import Card from "../Card/Card";
 const AvailableCourses = () => {
   return (
@@ -17,7 +16,7 @@ const AvailableCourses = () => {
             "heading-secondary " + classes.section__availableCourses__heading
           }
         >
-          Select a Category
+          Select a category
         </h2>
       </div>
       <Grid container component="main" sx={{ height: "auto" }}>

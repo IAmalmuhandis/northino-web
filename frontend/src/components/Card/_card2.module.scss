@@ -3,11 +3,9 @@
 .card {
   text-align: center;
   margin: auto;
-  //   background-image: linear-gradient(
-  //     to right bottom,
-  //     $color-white,
-  //     $color-primary
-  //   ) !important;
+  &__img {
+    width: 100%;
+  }
   &__header {
     height: 16rem;
     @include respond(phone) {
@@ -17,5 +15,18 @@
   &__link {
     text-decoration: none;
     color: $color-primary-dark;
+  }
+  &__iframe {
+    height: 20rem;
+    width: 100%;
+    border-radius: $border-radius-size;
+    @include respond(phone) {
+      width: 100%;
+      height: 15rem;
+    }
+    @include respond(small-phone) {
+      height: 15rem;
+      width: 100%;
+    }
   }
 }

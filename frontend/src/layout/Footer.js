@@ -20,21 +20,7 @@ const Footer = () => {
                   Home
                 </Link>
               </li>
-              <li className={classes.footer__item}>
-                <Link to="/northino-tv" className={classes.footer__link}>
-                  Northino TV
-                </Link>
-              </li>
-              <li className={classes.footer__item}>
-                <Link to="/northino-store" className={classes.footer__link}>
-                  Northino Store
-                </Link>
-              </li>
-              <li className={classes.footer__item}>
-                <Link to="/northino-services" className={classes.footer__link}>
-                  Services
-                </Link>
-              </li>
+
               <li className={classes.footer__item}>
                 <Link to="/about-northino" className={classes.footer__link}>
                   About Us

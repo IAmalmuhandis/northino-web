@@ -11,19 +11,18 @@ const OurServices = () => {
             "heading-secondary " + classes.section__ourServices__heading
           }
         >
-          Our Services
+          What we Do?
         </h2>
       </div>
       <div className="row">
         <div className="col-1-of-3">
           <Card
             cardNumber="1"
-            headingText="Northino TV"
-            subHeadingText="We provide video tutorials, Reviews and Tech interviews, discussing
-            on important technology fields"
-            descriptionTitle="Tutorials, Discussions and Interviews"
-            description="Technology fields such as; Software development Blockchain
-              Artificial Intelligence Software Engineering Startup Motivational
+            headingText="Start Learning"
+            subHeadingText="We provide Full Courses tutorials,
+                            Reviews and Interviews with some amazing techies from our community"
+            descriptionTitle="Full courses, Crash courses and Interviews"
+            description="Technology fields such as; Software development,   Digital Marketing, Blockchain, AI, VR, Motivational
               Videos"
             btnText="Start Learning"
           />
@@ -31,19 +30,19 @@ const OurServices = () => {
         <div className="col-1-of-3">
           <Card
             cardNumber="2"
-            headingText="Northino Store"
-            subHeadingText="We sell and recommend gadgets that suit your specific needs such as Laptops, phones, camera etc"
-            descriptionTitle="Gadget Store"
-            description="Using our platform our customers can be able to buy gadgets and also provide you with videos that will provide you with more details about the best gadget that suit your needs.
+            headingText="Connect with our mentors"
+            subHeadingText="A mentor is an experienced and trusted adviser that will help you achieve your dream"
+            descriptionTitle="You need a guidance!"
+            description="Get advices from an experienced and professional Mentors nearby your area.
              "
-            btnText="Coming Soon..."
+            btnText="Connect"
           />
         </div>
         <div className="col-1-of-3">
           <Card
             cardNumber="3"
             headingText="IT Solutions"
-            subHeadingText="We provide IT Solution services such as"
+            subHeadingText="We provide IT Solution services such as Custom software Development, Consultation and maintainance"
             descriptionTitle="Software Development, Business Promotion, Branding etc"
             description="We build mobile, desktop and web applications.
                 Software Maintenance and Consultation.

@@ -5,7 +5,7 @@
   align-items: center;
   margin-left: 1rem;
   margin-top: 0.5rem;
-  height: 7rem;
+  height: 5rem;
   @include respond(tab-port) {
     margin-top: 1rem;
   }
@@ -17,7 +17,7 @@
   }
 }
 .logo {
-  height: 12rem;
+  height: 9rem;
   @include respond(tab-land) {
     height: 10rem;
   }

@@ -71,25 +71,27 @@ router.post("/addClientProject", async (req, res) => {
   }
 });
 router.post("/addMentor", async (req, res) => {
-  const { mentor_name, mentor_field, mentees_trained, mentor_img } = req.body;
+  const { name, fieldOfExperience, about, picture, uniqueId } = req.body;
   try {
-    if (!(mentor_name && mentor_field && mentees_trained && mentor_img)) {
+    if (!(name && fieldOfExperience && about && picture && uniqueId)) {
       return res.status(400).json("Input cannot be empty");
     } else {
       const save = await prisma.mentors.create({
         data: {
-          mentor_name,
-          mentor_field,
-          mentees_trained,
-          mentor_img,
+          name,
+          fieldOfExperience,
+          about,
+          picture,
+          uniqueId,
         },
       });
     }
     res.json({
-      mentor_name,
-      mentor_field,
-      mentees_trained,
-      mentor_img,
+      name,
+      fieldOfExperience,
+      about,
+      picture,
+      uniqueId,
     });
   } catch (error) {
     console.log(error);

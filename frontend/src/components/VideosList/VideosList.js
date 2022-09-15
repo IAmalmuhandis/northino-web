@@ -16,7 +16,7 @@ const VideosList = (props) => {
       );
       setVideos(res.data);
     } catch (error) {
-      console.log("Almuhandis: " + error);
+      alert(error);
     }
   };
   return (

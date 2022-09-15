@@ -3,17 +3,23 @@ import Home from "./pages/Home";
 import NorthinoTV from "./pages/NorthinoTV";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
-import NorthinoStore from "./pages/NorthinoStore";
+import OurMentors from "./pages/OurMentors";
 import NorthinoServices from "./pages/NorthinoServices";
 import TVCourseSection from "./pages/TVCourseSection";
 import ServicesSelection from "./pages/ServicesSelection";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/signIn" element={<SignIn />} />
+      <Route path="/tutor-signUp" element={<SignUp type="tutor" />} />
+      <Route path="/signUp" element={<SignUp />} />
+      <Route path="/admin" element={<SignIn type="admin" />} />
       <Route path="/northino-tv" element={<NorthinoTV />} />
-      <Route path="/northino-store" element={<NorthinoStore />} />
+      <Route path="/our-mentors" element={<OurMentors />} />
       <Route path="/northino-services" element={<NorthinoServices />} />
       <Route path="/about-northino" element={<AboutUs />} />
 
@@ -80,7 +86,7 @@ function App() {
         element={<ServicesSelection service="branding-and-promotion-form" />}
       />
       <Route
-        path="/northino-services/get-mentor/request-service-form"
+        path="/getMentor-form"
         element={<ServicesSelection service="mentor-form" />}
       />
       <Route

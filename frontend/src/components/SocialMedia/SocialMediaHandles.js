@@ -1,9 +1,12 @@
 import classes from "./_socialMediaHandles.module.scss";
-import twitterLogo from "../../img/twitter.png";
-import facebookLogo from "../../img/facebook.png";
-import youtubeLogo from "../../img/youtube.png";
-import linkedinLogo from "../../img/linkedin.png";
-import instagramLogo from "../../img/instagram.png";
+import twitterLogo from "../../img/social-media-icons/twitter.png";
+import facebookLogo from "../../img/social-media-icons/facebook.png";
+import youtubeLogo from "../../img/social-media-icons/youtube.png";
+import linkedinLogo from "../../img/social-media-icons/linkedin.png";
+import instagramLogo from "../../img/social-media-icons/instagram.png";
+// import gmailLogo from "../../img/social-media-icons/gmail.png";
+import whatsappLogo from "../../img/social-media-icons/whatsapp.png";
+import telegramLogo from "../../img/social-media-icons/telegram.png";
 import "../../layout/_grid.scss";
 import "../../base/_utilities.scss";
 const SocialMediaHandles = () => {
@@ -50,6 +53,24 @@ const SocialMediaHandles = () => {
           <img
             src={instagramLogo}
             alt="Instagram"
+            className={classes.media__handles_icon}
+          />
+        </a>
+      </span>
+      <span className="">
+        <a href="https://www.instagram.com/northino_tech/">
+          <img
+            src={whatsappLogo}
+            alt="Whatsapp"
+            className={classes.media__handles_icon}
+          />
+        </a>
+      </span>
+      <span className="">
+        <a href="https://www.instagram.com/northino_tech/">
+          <img
+            src={telegramLogo}
+            alt="Telegram"
             className={classes.media__handles_icon}
           />
         </a>

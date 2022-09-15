@@ -3,12 +3,6 @@ import btnClasses from "../Button/_button.module.scss";
 import "../../base/_typography.scss";
 import { Link } from "react-router-dom";
 const Card = (props) => {
-  // cardNumber
-  // headingText
-  // subHeadingText
-  // descriptionTitle
-  // description
-  // btnText
   return (
     <div className={classes.card}>
       <div className={classes.card__side + " " + classes.card__side__front}>
