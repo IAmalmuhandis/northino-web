@@ -1,30 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.a7761809.chunk.css",
-    "main.js": "/static/js/main.575298d1.chunk.js",
-    "main.js.map": "/static/js/main.575298d1.chunk.js.map",
+    "main.css": "/static/css/main.87fe6c63.chunk.css",
+    "main.js": "/static/js/main.07f03e88.chunk.js",
+    "main.js.map": "/static/js/main.07f03e88.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d697f00d.js",
     "runtime-main.js.map": "/static/js/runtime-main.d697f00d.js.map",
-    "static/js/2.8e661ab7.chunk.js": "/static/js/2.8e661ab7.chunk.js",
-    "static/js/2.8e661ab7.chunk.js.map": "/static/js/2.8e661ab7.chunk.js.map",
+    "static/js/2.7c67ce4f.chunk.js": "/static/js/2.7c67ce4f.chunk.js",
+    "static/js/2.7c67ce4f.chunk.js.map": "/static/js/2.7c67ce4f.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a7761809.chunk.css.map": "/static/css/main.a7761809.chunk.css.map",
-    "static/js/2.8e661ab7.chunk.js.LICENSE.txt": "/static/js/2.8e661ab7.chunk.js.LICENSE.txt",
-    "static/media/_card.module.scss": "/static/media/sanee.b31857be.jpg",
+    "static/css/main.87fe6c63.chunk.css.map": "/static/css/main.87fe6c63.chunk.css.map",
+    "static/js/2.7c67ce4f.chunk.js.LICENSE.txt": "/static/js/2.7c67ce4f.chunk.js.LICENSE.txt",
+    "static/media/almuhandis.de57871f.jpg": "/static/media/almuhandis.de57871f.jpg",
+    "static/media/_card.module.scss": "/static/media/teaching.c8f9f1c9.jpg",
     "static/media/anga.1c10cf44.jpg": "/static/media/anga.1c10cf44.jpg",
     "static/media/_ourServices.module.scss": "/static/media/arewaLogo.f0fd63d6.png",
     "static/media/_heroSection.module.scss": "/static/media/team.6b806077.jpg",
-    "static/media/instagram.3d6c8f9c.png": "/static/media/instagram.3d6c8f9c.png",
     "static/media/majia.6c04fcc2.jpg": "/static/media/majia.6c04fcc2.jpg",
     "static/media/_availableServices.module.scss": "/static/media/northinoLogo.eb0cf4d1.png",
-    "static/media/youtube.4504d71f.png": "/static/media/youtube.4504d71f.png",
     "static/media/zaks.5f71a66f.jpg": "/static/media/zaks.5f71a66f.jpg",
     "static/media/zarah.9d26f4cc.jpg": "/static/media/zarah.9d26f4cc.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.d697f00d.js",
-    "static/js/2.8e661ab7.chunk.js",
-    "static/css/main.a7761809.chunk.css",
-    "static/js/main.575298d1.chunk.js"
+    "static/js/2.7c67ce4f.chunk.js",
+    "static/css/main.87fe6c63.chunk.css",
+    "static/js/main.07f03e88.chunk.js"
   ]
 }

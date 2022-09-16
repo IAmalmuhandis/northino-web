@@ -16,7 +16,12 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/signIn" element={<SignIn />} />
       <Route path="/tutor-signUp" element={<SignUp type="tutor" />} />
-      <Route path="/signUp" element={<SignUp />} />
+      <Route
+        path="/photo-videography-request"
+        element={<SignUp type="studio" />}
+      />
+
+      <Route path="/signUp" element={<SignUp type="learner" />} />
       <Route path="/admin" element={<SignIn type="admin" />} />
       <Route path="/northino-tv" element={<NorthinoTV />} />
       <Route path="/our-mentors" element={<OurMentors />} />

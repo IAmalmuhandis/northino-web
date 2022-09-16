@@ -24,7 +24,7 @@ const AvailableServices = () => {
             <Card
               cardNumber="9"
               headingText="Custom Software"
-              subHeadingText="Have your own business website, mobile app or desktop built for you."
+              subHeadingText="Have your own Custom software such as business website, mobile or desktop application built for you."
               descriptionTitle="Take your business to the next level"
               description="Let us build a portfolio for you as an individual and a custom software for your business or organisation"
               btnText="Request for service"
@@ -47,10 +47,10 @@ const AvailableServices = () => {
           <div className="row">
             <Card
               cardNumber="11"
-              headingText="Get a Mentor"
-              subHeadingText="A mentor is an experienced and trusted adviser that will help you achieve your dream"
-              descriptionTitle="You need a guidance"
-              description="Get advices from an experienced and professional Mentor."
+              headingText="Photo and videography"
+              subHeadingText="Book us for your events e.g seminar, conference, wedding, birthday and other events"
+              descriptionTitle="Our Team is the best"
+              description="We offer a high discount for our customers, and provide you with good photo and video edits for your memorable events"
               btnText="Request for Service"
             />
           </div>

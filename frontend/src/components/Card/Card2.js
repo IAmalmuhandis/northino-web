@@ -53,7 +53,7 @@ export default function Card2(props) {
                 props.btnText === "Request"
               ? "/northino-services/business-brandig-and-promotion/request-service-form"
               : props.cardName === "mentors" && props.btnText === "Request"
-              ? "/northino-services/get-mentor/request-service-form"
+              ? "/photo-videography-request"
               : props.cardName === "built-for-clients" && props.cardNo === "1"
               ? "/northino-services/custom-software-development/previous-clients-projects"
               : props.cardName === "built-for-clients" && props.cardNo === "2"
@@ -62,9 +62,9 @@ export default function Card2(props) {
                 props.cardNo === "1"
               ? "/northino-services/business-brandig-and-promotion/businesses-promoted"
               : props.cardName === "mentors" && props.cardNo === "1"
-              ? "/northino-services/get-mentor/mentors-list"
-              : props.type === "mentor"
-              ? "/getMentor-form"
+              ? "/our-mentors"
+              : props.type === "mentors"
+              ? "/our-mentors"
               : "/"
           }
         >

@@ -21,7 +21,7 @@ const OurServices = () => {
             headingText="Start Learning"
             subHeadingText="We provide Full Courses tutorials,
                             Reviews and Interviews with some amazing techies from our community"
-            descriptionTitle="Full courses, Crash courses and Interviews"
+            descriptionTitle="Achieve your goal within a short period of time"
             description="Technology fields such as; Software development,   Digital Marketing, Blockchain, AI, VR, Motivational
               Videos"
             btnText="Start Learning"
@@ -35,15 +35,16 @@ const OurServices = () => {
             descriptionTitle="You need a guidance!"
             description="Get advices from an experienced and professional Mentors nearby your area.
              "
+            type="mentors"
             btnText="Connect"
           />
         </div>
         <div className="col-1-of-3">
           <Card
             cardNumber="3"
-            headingText="IT Solutions"
-            subHeadingText="We provide IT Solution services such as Custom software Development, Consultation and maintainance"
-            descriptionTitle="Software Development, Business Promotion, Branding etc"
+            headingText="We offer more Services"
+            subHeadingText="We provide IT Solution services, custom software development, Business branding, photography and videography"
+            descriptionTitle="Software Development, Business Promotion, Photgraphy & Videography"
             description="We build mobile, desktop and web applications.
                 Software Maintenance and Consultation.
                 Business Promotion and other related services"

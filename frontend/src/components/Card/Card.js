@@ -97,7 +97,7 @@ const Card = (props) => {
               props.cardNumber === "1"
                 ? "/northino-tv"
                 : props.cardNumber === "2"
-                ? "/northino-store"
+                ? "/our-mentors"
                 : props.cardNumber === "3"
                 ? "/northino-services"
                 : props.cardNumber === "4"
@@ -115,7 +115,7 @@ const Card = (props) => {
                 : props.cardNumber === "10"
                 ? "/northino-services/business-brandig-and-promotion"
                 : props.cardNumber === "11"
-                ? "/northino-services/get-mentor"
+                ? "/photo-videography-request"
                 : "/"
             }
             className={

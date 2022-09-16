@@ -49,7 +49,6 @@ const ServiceBody = (props) => {
           <RecordListContainer serviceType={props.service} />
         </div>
       ) : props.service === "branding-and-promotion-form" ||
-        props.service === "mentor-form" ||
         props.service === "custom-software-form" ? (
         <div className="row">
           <RequestServiceForm serviceType={props.service} />
@@ -64,7 +63,7 @@ const ServiceBody = (props) => {
                 cardTitle={firstCardTitle}
                 cardDesc={firstCardDesc}
                 btnText="view"
-                cardImage="team.jpg"
+                cardImage="northinoTech.png"
                 cardNo="1"
               />
             </div>
@@ -75,7 +74,7 @@ const ServiceBody = (props) => {
                 cardTitle={secondCardTitle}
                 cardDesc={secondCardDesc}
                 btnText="view"
-                cardImage="northinoStore.jpg"
+                cardImage="codes.jpg"
                 cardNo="2"
               />
             </div>
@@ -88,7 +87,7 @@ const ServiceBody = (props) => {
                 cardTitle={thirdCardTitle}
                 cardDesc={thirdCardDesc}
                 btnText="Request"
-                cardImage="team.jpg"
+                cardImage="northinoLogo.png"
               />
             </div>
           </div>
@@ -103,7 +102,7 @@ const ServiceBody = (props) => {
               cardDesc={firstCardDesc}
               btnText="view"
               cardNo="1"
-              cardImage="northinoStore.jpg"
+              cardImage="northinoLogo.png"
             />
           </div>
           <div className="col-1-of-2">
@@ -113,7 +112,7 @@ const ServiceBody = (props) => {
               cardTitle={thirdCardTitle}
               cardDesc={thirdCardDesc}
               btnText="Request"
-              cardImage="codes.jpg"
+              cardImage="social-media.jpg"
             />
           </div>
         </div>

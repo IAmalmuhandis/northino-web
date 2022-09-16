@@ -8,7 +8,7 @@
   height: 52rem;
 
   &__side {
-    height: 35rem;
+    height: 29rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -20,65 +20,37 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &__front {
-      background-color: $color-tertiary;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-tertiary,
+        $color-primary
+      );
     }
     &__back {
       transform: rotateY(180deg);
       &_1 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary,
-          $color-primary
-        );
+        background-color: $color-tertiary;
       }
       &_2 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary,
-          $color-primary
-        );
+        background-color: $color-tertiary;
       }
       &_3 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary,
-          $color-primary
-        );
+        background-color: $color-tertiary;
       }
       &_4 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary,
-          $color-primary
-        );
+        background-color: $color-tertiary;
       }
       &_5 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary,
-          $color-primary
-        );
+        background-color: $color-tertiary;
       }
       &_6 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary,
-          $color-primary
-        );
+        background-color: $color-tertiary;
       }
       &_7 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary,
-          $color-primary
-        );
+        background-color: $color-tertiary;
       }
       &_8 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary,
-          $color-primary
-        );
+        background-color: $color-tertiary;
       }
     }
   }
@@ -153,7 +125,7 @@
       transform: translateY(-1.4rem) scale(1.2);
     }
     &__11 {
-      background-image: url(../../img/mentor.jpg);
+      background-image: url(../../img/camera.jpg);
       background-size: cover;
       background-position: center;
       transform: translateY(-1.4rem) scale(1.2);
@@ -177,10 +149,10 @@
     &__1 {
       background-image: linear-gradient(
         to right bottom,
-        rgba($color-secondary, 0.85),
-        rgba($color-secondary, 0.85)
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
       );
-      color: $color-primary;
+      color: $color-white;
     }
     &__2 {
       background-image: linear-gradient(
@@ -193,18 +165,18 @@
     &__3 {
       background-image: linear-gradient(
         to right bottom,
-        rgba($color-secondary, 0.85),
-        rgba($color-secondary, 0.85)
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
       );
-      color: $color-primary;
+      color: $color-white;
     }
     &__4 {
       background-image: linear-gradient(
         to right bottom,
-        rgba($color-secondary, 0.85),
-        rgba($color-secondary, 0.85)
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
       );
-      color: $color-primary;
+      color: $color-white;
     }
     &__5 {
       background-image: linear-gradient(
@@ -217,10 +189,10 @@
     &__6 {
       background-image: linear-gradient(
         to right bottom,
-        rgba($color-secondary, 0.85),
-        rgba($color-secondary, 0.85)
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
       );
-      color: $color-primary;
+      color: $color-white;
     }
     &__7 {
       background-image: linear-gradient(
@@ -233,10 +205,10 @@
     &__8 {
       background-image: linear-gradient(
         to right bottom,
-        rgba($color-secondary, 0.85),
-        rgba($color-secondary, 0.85)
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
       );
-      color: $color-primary;
+      color: $color-white;
     }
   }
   &__details {
@@ -272,15 +244,15 @@
     text-align: center;
   }
   &__price_box {
-    text-align: center;
-    color: $color-white;
-    margin-bottom: 3rem;
+    color: $color-grey-light-2;
+    margin-bottom: 1rem;
   }
   &__price_only {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
   }
   &__price_value {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 300;
   }
   /// PHONE SIZE CARD
@@ -468,10 +440,10 @@
       padding: 1rem;
     }
     &__price_value {
-      font-size: 1.6rem;
+      font-size: 1.1rem;
     }
     &__price_only {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 
@@ -535,22 +507,21 @@
       padding: 5rem 1rem 1rem 1rem;
       margin: 0 auto;
       text-align: center;
-      background-color: $color-primary;
+      background-color: $color-tertiary;
     }
     &__price_box {
+      margin-left: -1rem;
       text-align: center;
       margin-bottom: 0.5rem;
-      font-size: 0.4rem;
-      // margin-left: -1rem;
       display: flex;
       justify-content: center;
-      padding: 1rem;
+      padding: 2rem;
     }
     &__price_value {
       display: none;
     }
     &__price_only {
-      font-size: 1.2rem;
+      font-size: 0.9rem;
     }
   }
 }
