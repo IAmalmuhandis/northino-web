@@ -9,6 +9,7 @@ import TVCourseSection from "./pages/TVCourseSection";
 import ServicesSelection from "./pages/ServicesSelection";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import TutorDashboard from "./pages/tutorDashboard/TutorDashboard";
 
 function App() {
   return (
@@ -20,14 +21,13 @@ function App() {
         path="/photo-videography-request"
         element={<SignUp type="studio" />}
       />
-
       <Route path="/signUp" element={<SignUp type="learner" />} />
       <Route path="/admin" element={<SignIn type="admin" />} />
       <Route path="/northino-tv" element={<NorthinoTV />} />
       <Route path="/our-mentors" element={<OurMentors />} />
       <Route path="/northino-services" element={<NorthinoServices />} />
+      <Route path="/tutor-dashboard" element={<TutorDashboard />} />
       <Route path="/about-northino" element={<AboutUs />} />
-
       <Route
         path="/contact-us"
         element={
