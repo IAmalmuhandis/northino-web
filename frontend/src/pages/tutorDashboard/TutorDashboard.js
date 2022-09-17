@@ -1,16 +1,14 @@
-// project import
-import Routes from "./routes";
-import ThemeCustomization from "./themes";
-import ScrollTop from "./components/ScrollTop";
+// // project import
+// import Routes from "./routes";
 
-// ==============================|| APP - THEME, ROUTER, LOCAL  ||============================== //
+// // ==============================|| APP - THEME, ROUTER, LOCAL  ||============================== //
 
-const TutorDashboard = () => (
-  <ThemeCustomization>
-    <ScrollTop>
-      <Routes />
-    </ScrollTop>
-  </ThemeCustomization>
-);
+// const TutorDashboard = () => (
+//   <ThemeCustomization>
+//     <ScrollTop>
+//       {/* <Routes /> */}
+//     </ScrollTop>
+//   </ThemeCustomization>
+// );
 
-export default TutorDashboard;
+// export default TutorDashboard;

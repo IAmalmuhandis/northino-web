@@ -68,7 +68,7 @@ const status = [
 
 // ==============================|| DASHBOARD - DEFAULT ||============================== //
 
-const DashboardDefault = () => {
+const DefaultDashboard = () => {
   const [value, setValue] = useState("today");
   const [slot, setSlot] = useState("week");
 
@@ -376,4 +376,4 @@ const DashboardDefault = () => {
   );
 };
 
-export default DashboardDefault;
+export default DefaultDashboard;
