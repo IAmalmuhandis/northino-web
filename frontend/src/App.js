@@ -32,11 +32,7 @@ function App() {
           <Route path="/our-mentors" element={<OurMentors />} />
           <Route path="/northino-services" element={<NorthinoServices />} />
           <Route path="/about-northino" element={<AboutUs />} />
-          <Route
-            path="/tutor-dashboard"
-            element={<MainLayout />}
-            children={<AddVideo />}
-          />
+          <Route path="/tutor-dashboard" element={<DefaultDashboard />} />
           <Route
             path="/contact-us"
             element={
