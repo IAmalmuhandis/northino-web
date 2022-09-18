@@ -78,7 +78,7 @@ function PricingContent() {
           color="text.primary"
           gutterBottom
         >
-          Pricing and Plans
+          Pricing
         </Typography>
         <Typography
           variant="h5"
@@ -86,7 +86,7 @@ function PricingContent() {
           color="text.secondary"
           component="p"
         >
-          Choose
+          Choose a subscription type
         </Typography>
       </Container>
       {/* End hero unit */}
@@ -151,7 +151,15 @@ function PricingContent() {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant}>
+                  <Button
+                    fullWidth
+                    variant={tier.buttonVariant}
+                    redirectTo={
+                      tier.title === "free"
+                        ? "/tutor-signUp"
+                        : "/tutor-Registration-payment"
+                    }
+                  >
                     {tier.buttonText}
                   </Button>
                 </CardActions>
@@ -160,6 +168,8 @@ function PricingContent() {
           ))}
         </Grid>
       </Container>
+      <br />
+      <br />
       {/* Footer */}
       <Footer />
       {/* End footer */}
