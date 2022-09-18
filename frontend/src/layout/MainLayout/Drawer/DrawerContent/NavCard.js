@@ -2,11 +2,11 @@
 import { Button, CardMedia, Link, Stack, Typography } from "@mui/material";
 
 // project import
-import MainCard from "../../../../components/MainCard";
+import MainCard from "../../../../tutorDashboard/components/MainCard";
 
 // assets
-import avatar from "../../../../assets/images/users/avatar-group.png";
-import AnimateButton from "../../../../components/@extended/AnimateButton";
+import avatar from "../../../../tutorDashboard/assets/images/users/avatar-group.png";
+import AnimateButton from "../../../../tutorDashboard/components/@extended/AnimateButton";
 
 // ==============================|| DRAWER CONTENT - NAVIGATION CARD ||============================== //
 

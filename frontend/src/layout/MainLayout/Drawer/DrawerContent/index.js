@@ -1,7 +1,7 @@
 // project import
 import NavCard from "../DrawerContent/NavCard";
 import Navigation from "./Navigation";
-import SimpleBar from "../../../../components/third-party/SimpleBar";
+import SimpleBar from "../../../../tutorDashboard/components/third-party/SimpleBar";
 
 // ==============================|| DRAWER CONTENT ||============================== //
 

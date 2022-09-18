@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { lazy } from "react";
 import Home from "./pages/Home";
 import NorthinoTV from "./pages/NorthinoTV";
 import AboutUs from "./pages/AboutUs";
@@ -9,11 +10,39 @@ import TVCourseSection from "./pages/TVCourseSection";
 import ServicesSelection from "./pages/ServicesSelection";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import DefaultDashboard from "./pages/tutorDashboard/pages/dashboard/index";
-import AddVideo from "./pages/tutorDashboard/pages/addVideo/addVideo";
-import ThemeCustomization from "../src/pages/tutorDashboard/themes";
-import ScrollTop from "../src/pages/tutorDashboard/components/ScrollTop";
-import MainLayout from "../src/pages/tutorDashboard/layout/MainLayout";
+import ThemeCustomization from "./tutorDashboard/themes";
+import ScrollTop from "./tutorDashboard/components/ScrollTop";
+import MainLayout from "./layout/MainLayout";
+import Loadable from "./tutorDashboard/components/Loadable";
+
+// render - dashboard
+const TutorDashboard = Loadable(
+  lazy(() => import("./tutorDashboard/pages/dashboard"))
+);
+// render - Media
+const AddVideo = Loadable(
+  lazy(() => import("./tutorDashboard/pages/addVideo/addVideo"))
+);
+const ManageVideo = Loadable(
+  lazy(() => import("./tutorDashboard/pages/manageVideo/manageVideo"))
+);
+// render - subsriptions
+const RecievedPayments = Loadable(
+  lazy(() => import("./tutorDashboard/pages/recievedPayments/recievedPayments"))
+);
+// render - account
+const Profile = Loadable(
+  lazy(() => import("./tutorDashboard/pages/profile/profile"))
+);
+const Settings = Loadable(
+  lazy(() => import("./tutorDashboard/pages/settings/settings"))
+);
+// render - support
+const SupportTeam = Loadable(
+  lazy(() => import("./tutorDashboard/pages/supportTeam/supportTeam"))
+);
+const FAQS = Loadable(lazy(() => import("./tutorDashboard/pages/FAQS/FAQS")));
+
 function App() {
   return (
     <ThemeCustomization>
@@ -32,7 +61,7 @@ function App() {
           <Route path="/our-mentors" element={<OurMentors />} />
           <Route path="/northino-services" element={<NorthinoServices />} />
           <Route path="/about-northino" element={<AboutUs />} />
-          <Route path="/tutor-dashboard" element={<DefaultDashboard />} />
+          <Route path="/tutor-dashboard" element={<TutorDashboard />} />
           <Route
             path="/contact-us"
             element={
