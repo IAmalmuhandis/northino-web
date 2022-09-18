@@ -35,7 +35,7 @@ import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 
 // ============================|| FIREBASE - REGISTER ||============================ //
 
-const AuthRegister = () => {
+const AuthTutorRegister = () => {
   const [level, setLevel] = useState();
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => {
@@ -178,7 +178,7 @@ const AuthRegister = () => {
                     name="email"
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    placeholder="example@gmail.com"
+                    placeholder="instructor@gmail.com"
                     inputProps={{}}
                   />
                   {touched.email && errors.email && (
@@ -251,7 +251,7 @@ const AuthRegister = () => {
               </Grid>
               <Grid item xs={12}>
                 <Typography variant="body2">
-                  By Signing up, you agree to our &nbsp;
+                  By Signing up as an instructor, you agree to our &nbsp;
                   <Link variant="subtitle2" component={RouterLink} to="#">
                     Terms of Service
                   </Link>
@@ -277,7 +277,7 @@ const AuthRegister = () => {
                     variant="contained"
                     color="primary"
                   >
-                    Create Account
+                    Register as an Instructor
                   </Button>
                 </AnimateButton>
               </Grid>
@@ -297,4 +297,4 @@ const AuthRegister = () => {
   );
 };
 
-export default AuthRegister;
+export default AuthTutorRegister;
