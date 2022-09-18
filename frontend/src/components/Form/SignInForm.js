@@ -88,15 +88,7 @@ const SignInForm = (props) => {
             backgroundPosition: "center",
           }}
         />
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={6}
-          component={Paper}
-          elevation={6}
-          square
-        >
+        <Grid item xs={12} sm={12} md={6} elevation={6} square>
           <Box
             sx={{
               my: 8,
