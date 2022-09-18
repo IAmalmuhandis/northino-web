@@ -40,7 +40,7 @@ const Navigation = () => {
             </Link>
           </li>
           <li className={classes.navigation__item}>
-            <Link to="/tutor-signUp" className={classes.navigation__link}>
+            <Link to="/pricing" className={classes.navigation__link}>
               Become a Tutor
             </Link>
           </li>

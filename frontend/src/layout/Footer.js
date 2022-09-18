@@ -46,7 +46,7 @@ const Footer = () => {
               Northino Web Dev Team
             </Link>
             .<br />
-            Copyright &copy; by Northino Tech.
+            Copyright {new Date().getFullYear()} &copy; by Northino Tech.
           </p>
         </div>
       </div>

@@ -1,0 +1,1 @@
+{"version":3,"sources":["tutorDashboard/pages/manageVideo/manageVideo.js"],"names":["manageVideo"],"mappings":"sIAGeA,UAHK,WAChB,OAAO","file":"static/js/9.f1d6afa7.chunk.js","sourcesContent":["const manageVideo = () => {\n    return <div>Manage Video</div>;\n};\nexport default manageVideo;\n"],"sourceRoot":""}
