@@ -1,29 +1,10 @@
 import LogoImg from "../img/northinoLogo.png";
 
 import classes from "./_footer.module.scss";
-import Typography from "@mui/material/Typography";
-
 import { Link } from "react-router-dom";
 import "../base/_utilities.scss";
 import "../layout/_grid.scss";
 import SocialMediaHandles from "../components/SocialMedia/SocialMediaHandles";
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://northino.com/">
-        northino
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 const Footer = () => {
   return (
     <footer className={classes.footer}>
@@ -65,7 +46,7 @@ const Footer = () => {
               Northino Web Dev Team
             </Link>
             .<br />
-            <Copyright sx={{ mt: 5 }} />
+            Copyright {new Date().getFullYear()} &copy; by Northino Tech.
           </p>
         </div>
       </div>
