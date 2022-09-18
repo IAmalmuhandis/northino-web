@@ -61,7 +61,16 @@ function App() {
           <Route path="/our-mentors" element={<OurMentors />} />
           <Route path="/northino-services" element={<NorthinoServices />} />
           <Route path="/about-northino" element={<AboutUs />} />
-          <Route path="/tutor-dashboard" element={<TutorDashboard />} />
+          <Route element={<MainLayout />}>
+            <Route path="/tutor-dashboard" element={<TutorDashboard />} />
+            <Route path="/addVideo" element={<AddVideo />} />
+            <Route path="/manageVideo" element={<ManageVideo />} />
+            <Route path="/recievedPayments" element={<RecievedPayments />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/supportTeam" element={<SupportTeam />} />
+            <Route path="/FAQS" element={<FAQS />} />
+          </Route>
           <Route
             path="/contact-us"
             element={
