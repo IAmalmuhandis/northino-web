@@ -9,7 +9,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import StarIcon from "@mui/icons-material/StarBorder";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+import { useNavigate } from "react-router-dom";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import Container from "@mui/material/Container";
 import Footer from "../layout/Footer";
@@ -56,6 +56,15 @@ const tiers = [
 ];
 
 function PricingContent() {
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/tutor-signUp`;
+    navigate(path);
+  };
+  const route2Change = () => {
+    let path = `tutor-registration-payment`;
+    navigate(path);
+  };
   return (
     <React.Fragment>
       <GlobalStyles
@@ -154,10 +163,8 @@ function PricingContent() {
                   <Button
                     fullWidth
                     variant={tier.buttonVariant}
-                    redirectTo={
-                      tier.title === "free"
-                        ? "/tutor-signUp"
-                        : "/tutor-Registration-payment"
+                    onClick={
+                      tier.title === "Free" ? routeChange : route2Change
                     }
                   >
                     {tier.buttonText}
