@@ -71,7 +71,7 @@ function App() {
             <Route path="/supportTeam" element={<SupportTeam />} />
             <Route path="/FAQS" element={<FAQS />} />
           </Route>
-          <Route
+          <Route  
             path="/contact-us"
             element={
               <ContactUs
