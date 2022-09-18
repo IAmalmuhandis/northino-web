@@ -8,7 +8,8 @@ import OurMentors from "./pages/OurMentors";
 import NorthinoServices from "./pages/NorthinoServices";
 import TVCourseSection from "./pages/TVCourseSection";
 import ServicesSelection from "./pages/ServicesSelection";
-import SignIn from "./pages/SignIn";
+// import SignIn from "./pages/SignIn";
+import Login from "./pages/authentication/Login";
 import SignUp from "./pages/SignUp";
 import ThemeCustomization from "./tutorDashboard/themes";
 import ScrollTop from "./tutorDashboard/components/ScrollTop";
@@ -50,7 +51,7 @@ function App() {
       <ScrollTop>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signIn" element={<SignIn />} />
+          <Route path="/signIn" element={<Login />} />
           <Route path="/tutor-signUp" element={<SignUp type="tutor" />} />
           <Route path="/pricing" element={<TutorRegistryType />} />
           <Route
