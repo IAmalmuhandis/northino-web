@@ -14,6 +14,7 @@ import ThemeCustomization from "./tutorDashboard/themes";
 import ScrollTop from "./tutorDashboard/components/ScrollTop";
 import MainLayout from "./layout/MainLayout";
 import Loadable from "./tutorDashboard/components/Loadable";
+import TutorRegistryType from "./pages/TutorRegistryType";
 
 // render - dashboard
 const TutorDashboard = Loadable(
@@ -51,6 +52,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/tutor-signUp" element={<SignUp type="tutor" />} />
+          <Route path="/pricing" element={<TutorRegistryType />} />
           <Route
             path="/photo-videography-request"
             element={<SignUp type="studio" />}
@@ -71,7 +73,7 @@ function App() {
             <Route path="/supportTeam" element={<SupportTeam />} />
             <Route path="/FAQS" element={<FAQS />} />
           </Route>
-          <Route  
+          <Route
             path="/contact-us"
             element={
               <ContactUs
@@ -161,5 +163,4 @@ function App() {
     </ThemeCustomization>
   );
 }
-
 export default App;
