@@ -1,21 +1,9 @@
 // assets
-import {
-    AppstoreAddOutlined,
-    AntDesignOutlined,
-    BarcodeOutlined,
-    BgColorsOutlined,
-    FontSizeOutlined,
-    LoadingOutlined
-} from '@ant-design/icons';
+import { DollarCircleOutlined } from "@ant-design/icons";
 
 // icons
 const icons = {
-    FontSizeOutlined,
-    BgColorsOutlined,
-    BarcodeOutlined,
-    AntDesignOutlined,
-    LoadingOutlined,
-    AppstoreAddOutlined
+  DollarCircleOutlined,
 };
 
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
@@ -30,7 +18,7 @@ const subscriptions = {
             title: 'Recieved Payments',
             type: 'item',
             url: '/recievedPayments',
-            icon: icons.FontSizeOutlined
+            icon: icons.DollarCircleOutlined
         }
     ]
 };

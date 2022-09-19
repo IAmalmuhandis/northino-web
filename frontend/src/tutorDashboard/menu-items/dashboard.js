@@ -1,13 +1,10 @@
 // assets
-import { DashboardOutlined } from "@ant-design/icons";
-
+import { ProfileOutlined } from "@ant-design/icons";
 // icons
 const icons = {
-  DashboardOutlined,
+  ProfileOutlined,
 };
-
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
-
 const dashboard = {
   id: "group-dashboard",
   title: "Navigation",
@@ -18,10 +15,9 @@ const dashboard = {
       title: "Dashboard",
       type: "item",
       url: "/tutor-dashboard",
-      icon: icons.DashboardOutlined,
+      icon: icons.ProfileOutlined,
       breadcrumbs: false,
     },
   ],
 };
-
 export default dashboard;
