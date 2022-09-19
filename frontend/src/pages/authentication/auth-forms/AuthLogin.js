@@ -1,5 +1,6 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
+import { useState } from "react";
 
 // material-ui
 import {
@@ -16,6 +17,8 @@ import {
   OutlinedInput,
   Stack,
   Typography,
+  Select,
+  MenuItem,
 } from "@mui/material";
 
 // third party
@@ -33,8 +36,11 @@ import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 
 const AuthLogin = () => {
   const [checked, setChecked] = React.useState(false);
-
+  const [accountType, setAccountType] = useState("");
   const [showPassword, setShowPassword] = React.useState(false);
+  const handleAccountTypeChange = (e) => {
+    setAccountType(e.target.value);
+  };
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -144,6 +150,21 @@ const AuthLogin = () => {
                       {errors.password}
                     </FormHelperText>
                   )}
+                </Stack>
+              </Grid>
+              <Grid item xs={12}>
+                <Stack spacing={1}>
+                  <InputLabel id="account-type">SignIn As</InputLabel>
+                  <Select
+                    labelId="account-type"
+                    value={accountType}
+                    id="account-type"
+                    onChange={handleAccountTypeChange}
+                    fullWidth
+                  >
+                    <MenuItem value={"Learner"}>Learner</MenuItem>
+                    <MenuItem value={"Tutor"}>Tutor</MenuItem>
+                  </Select>
                 </Stack>
               </Grid>
 
