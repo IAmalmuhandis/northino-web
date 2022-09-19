@@ -36,7 +36,7 @@ import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 
 const AuthLogin = () => {
   const [checked, setChecked] = React.useState(false);
-  const [accountType, setAccountType] = useState("");
+  const [accountType, setAccountType] = useState("Learner");
   const [showPassword, setShowPassword] = React.useState(false);
   const handleAccountTypeChange = (e) => {
     setAccountType(e.target.value);
@@ -55,7 +55,7 @@ const AuthLogin = () => {
         initialValues={{
           email: "example@gmail.com",
           password: "123456",
-          loginType: "learner",
+        
           submit: null,
         }}
         validationSchema={Yup.object().shape({
