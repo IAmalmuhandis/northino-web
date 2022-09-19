@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import AddressForm from "./AddressForm";
+import ProfileForm from "./ProfileForm";
 import PaymentForm from "./PaymentForm";
 import Review from "./Review";
 
@@ -26,13 +26,11 @@ function Copyright() {
     </Typography>
   );
 }
-
-const steps = ["About you", "Career", "Profile Overview"];
-
+const steps = ["Profile", "Bank Details", "Overview"];
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <AddressForm />;
+      return <ProfileForm />;
     case 1:
       return <PaymentForm />;
     case 2:
@@ -80,8 +78,8 @@ export default function Checkout() {
                   Thank you for completing your profile
                 </Typography>
                 <Typography variant="subtitle1">
-                 Your Tutor ID is #2001539. We have emailed your Details
-                  , and will send you an update when you verify your account.
+                  Your Tutor ID is #2001539. We have emailed your Details , and
+                  will send you an update when you verify your account.
                 </Typography>
               </React.Fragment>
             ) : (
@@ -99,7 +97,7 @@ export default function Checkout() {
                     onClick={handleNext}
                     sx={{ mt: 3, ml: 1 }}
                   >
-                    {activeStep === steps.length - 1 ? "Place order" : "Next"}
+                    {activeStep === steps.length - 1 ? "Save Profile" : "Next"}
                   </Button>
                 </Box>
               </React.Fragment>

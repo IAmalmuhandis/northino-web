@@ -5,70 +5,59 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Grid from "@mui/material/Grid";
 
-const products = [
+const informations = [
   {
-    name: "Product 1",
-    desc: "A nice thing",
-    price: "$9.99",
+    name: "First Name",
+    desc: "Abubakar",
   },
   {
-    name: "Product 2",
-    desc: "Another thing",
-    price: "$3.45",
+    name: "Last Name",
+    desc: "Muhammad",
   },
   {
-    name: "Product 3",
-    desc: "Something else",
-    price: "$6.51",
+    name: "Email Address",
+    desc: "abubakaralmuhandis@gmail.com",
   },
   {
-    name: "Product 4",
-    desc: "Best thing of all",
-    price: "$14.11",
+    name: "Phone Number",
+    desc: "08123402377",
   },
-  { name: "Shipping", desc: "", price: "Free" },
+  {
+    name: "Years of Experience",
+    desc: "3",
+  },
+  {
+    name: "About you",
+    desc: "I am a professional front-end developer, also am a software engineering student. i mentored almost 1000 student and equip them with digital skills.",
+  },
 ];
 
-const addresses = ["1 MUI Drive", "Reactville", "Anytown", "99999", "USA"];
 const payments = [
-  { name: "Card type", detail: "Visa" },
-  { name: "Card holder", detail: "Mr John Smith" },
-  { name: "Card number", detail: "xxxx-xxxx-xxxx-1234" },
-  { name: "Expiry date", detail: "04/2024" },
+  { name: "Account Name", detail: "Muhammad Abubakar Umar" },
+  { name: "Account Number", detail: "3136779354" },
+  { name: "Bank Name", detail: "First Bank" },
 ];
 
 export default function Review() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Order summary
+        Profile Overview
       </Typography>
       <List disablePadding>
-        {products.map((product) => (
-          <ListItem key={product.name} sx={{ py: 1, px: 0 }}>
-            <ListItemText primary={product.name} secondary={product.desc} />
-            <Typography variant="body2">{product.price}</Typography>
+        {informations.map((information) => (
+          <ListItem key={information.name} sx={{ py: 1, px: 0 }}>
+            <ListItemText
+              primary={information.name}
+              secondary={information.desc}
+            />
           </ListItem>
         ))}
-
-        <ListItem sx={{ py: 1, px: 0 }}>
-          <ListItemText primary="Total" />
-          <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-            $34.06
-          </Typography>
-        </ListItem>
       </List>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
+        <Grid item container direction="column" xs={12} sm={12} md={12}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-            Shipping
-          </Typography>
-          <Typography gutterBottom>John Smith</Typography>
-          <Typography gutterBottom>{addresses.join(", ")}</Typography>
-        </Grid>
-        <Grid item container direction="column" xs={12} sm={6}>
-          <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-            Payment details
+            Bank details
           </Typography>
           <Grid container>
             {payments.map((payment) => (
