@@ -280,6 +280,9 @@ const AuthTutorRegister = () => {
                     Register as an Instructor
                   </Button>
                 </AnimateButton>
+                <Link variant="subtitle2" component={RouterLink} to="/signIn">
+                  Already have an account?
+                </Link>{" "}
               </Grid>
               <Grid item xs={12}>
                 <Divider>
