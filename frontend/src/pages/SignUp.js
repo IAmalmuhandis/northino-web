@@ -12,8 +12,8 @@ const SignUp = (props) => {
       ) : props.type === "studio" ? (
         <PhotographyRequestForm />
       ) : (
-        // <TutorSignUpForm />
-        <Register type="tutor"/>
+        <TutorSignUpForm />
+        // <Register type="tutor"/>
       )}
     </div>
   );

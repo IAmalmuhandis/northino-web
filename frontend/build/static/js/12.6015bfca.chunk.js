@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-course"]=this["webpackJsonpreact-course"]||[]).push([[12],{785:function(t,e,c){"use strict";c.r(e);var r=c(0);e.default=function(){return Object(r.jsx)("div",{children:"contact support team here"})}}}]);
-//# sourceMappingURL=12.6015bfca.chunk.js.map

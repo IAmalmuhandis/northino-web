@@ -13,6 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import bgImg from "../../img/anga.jpg";
 import { useState } from "react";
+import AuthTutorRegister from "../../pages/authentication/auth-forms/AuthTutorRegister";
 import InputLabel from "@mui/material/InputLabel";
 const theme = createTheme();
 const axios = require("axios").default;
@@ -110,7 +111,7 @@ const SignUpForm = (props) => {
           elevation={6}
           square
         >
-          <Box
+          {/* <Box
             sx={{
               my: 8,
               mx: 4,
@@ -251,7 +252,9 @@ const SignUpForm = (props) => {
 
               <Link to="/">Back</Link>
             </Box>
-          </Box>
+          </Box> */}
+          {/* Tutor signup form */}
+          <AuthTutorRegister />
         </Grid>
       </Grid>
     </ThemeProvider>
