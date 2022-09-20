@@ -1,6 +1,11 @@
+/** @format */
+
 const express = require("express");
+var cloudinary = require("cloudinary").v2;
 const prisma = require("../db");
 const router = express.Router();
+cloudinary.config();
+
 router.post("/addBuiltProject", async (req, res) => {
   const { project_name, project_description, project_link, project_logo } =
     req.body;
@@ -29,6 +34,7 @@ router.post("/addBuiltProject", async (req, res) => {
     console.log(error);
   }
 });
+
 router.post("/addClientProject", async (req, res) => {
   const {
     client_name,
@@ -70,6 +76,7 @@ router.post("/addClientProject", async (req, res) => {
     console.log(error);
   }
 });
+
 router.post("/addMentor", async (req, res) => {
   const { name, fieldOfExperience, about, picture, uniqueId } = req.body;
   try {
@@ -97,6 +104,7 @@ router.post("/addMentor", async (req, res) => {
     console.log(error);
   }
 });
+
 router.post("/addPromotedBusinesses", async (req, res) => {
   const { business_name, business_logo, business_description } = req.body;
   try {
@@ -121,20 +129,45 @@ router.post("/addPromotedBusinesses", async (req, res) => {
   }
 });
 
+router.post("/uploadImage", async (req, res) => {
+  const { image_url, image_name } = req.body;
+
+  if (!(image_url && image_name)) {
+    return res.status(400).json("Input cannot be empty")
+  }
+
+  cloudinary.uploader
+    .upload(image_url, { public_id: image_name})
+    .then(function (image) {
+      return res.status(200).json(image);
+    })
+    .catch(function (err) {
+      if (err) {
+        return res.json(err);
+      }
+    });
+});
+
+router.post("/uploadVideo", async (req, res) => {});
+
 router.get("/getClientProjects", async (req, res) => {
   const find = await prisma.client_projects.findMany({});
   res.json(find);
 });
+
 router.get("/getBuiltProjects", async (req, res) => {
   const find = await prisma.built_projects.findMany({});
   res.json(find);
 });
+
 router.get("/getMentors", async (req, res) => {
   const find = await prisma.mentors.findMany({});
   res.json(find);
 });
+
 router.get("/getPromotedBusinesses", async (req, res) => {
   const find = await prisma.promoted_businesses.findMany({});
   res.json(find);
 });
+
 module.exports = router;
