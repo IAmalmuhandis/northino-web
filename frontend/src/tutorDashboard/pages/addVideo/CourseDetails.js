@@ -36,17 +36,18 @@ export default function CourseDetails() {
             variant="outlined"
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={12}>
           <TextField
             required
             id="courseDescription"
             name="courseDescription"
             label="Course Description"
             fullWidth
-            variant="standard"
+            variant="outlined"
+            multiline
           />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sm={6}>
           <InputLabel id="account-type">--Select Level--</InputLabel>
           <Select
             labelId="level"
@@ -62,46 +63,81 @@ export default function CourseDetails() {
           </Select>
         </Grid>
         <Grid item xs={12} sm={6}>
+          <InputLabel id="account-type">--Select Category--</InputLabel>
+          <Select
+            labelId="category"
+            value="category"
+            id="category"
+            onChange={""}
+            fullWidth
+          >
+            <MenuItem value={"Development"}>Development</MenuItem>
+            <MenuItem value={"Business"}>Business</MenuItem>
+            <MenuItem value={"Finance & Accounting"}>
+              Finance & Accounting
+            </MenuItem>
+            <MenuItem value={"IT & Software"}>IT & Software</MenuItem>
+            <MenuItem value={"Office Productivity"}>
+              Office Productivity
+            </MenuItem>
+            <MenuItem value={"Personal Development"}>
+              Personal Development
+            </MenuItem>
+            <MenuItem value={"Design"}>Design</MenuItem>
+            <MenuItem value={"Marketing"}>Marketing</MenuItem>
+            <MenuItem value={"Photography & Video"}>
+              Photography & Video
+            </MenuItem>
+            <MenuItem value={"Teaching & Academics"}>
+              Teaching & Academics
+            </MenuItem>
+          </Select>
+        </Grid>
+        <Grid item xs={12} sm={12}>
           <TextField
             required
-            id="phoneNumber"
-            name="phoneNumber"
-            label="Phone Number"
+            id="primarilyTaught"
+            name="primarilyTaught"
+            label="What is primarily taught in you course?"
             fullWidth
-            autoComplete="Phone Number"
-            variant="standard"
+            variant="outlined"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <TextField
-            id="yearOfExperience"
-            name="yearOfExperience"
-            type="number"
-            label="Year of experience"
-            fullWidth
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            id="areaOfExpertise"
-            name="areaOfExpertise"
-            label="Tell us about yourself and your area of expertise "
-            fullWidth
-            variant="standard"
-            multiline
-          />
-        </Grid>
-
-        <Grid item xs={12} sm={6}>
+          <InputLabel id="courseImg">Course Image</InputLabel>
           <TextField
             required
-            id="picture"
-            name="picture"
+            id="courseImg"
+            name="courseImg"
             type="file"
             fullWidth
-            variant="standard"
+            variant="outlined"
           />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Typography variant="body2">
+            Upload your course image here. It must meet our course image quality
+            standards to be accepted. Important guidelines: 750x422 pixels;
+            .jpg, .jpeg,. gif, or .png. no text on the image.
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <InputLabel id="courseImg">Promotional Video</InputLabel>
+          <TextField
+            required
+            id="promotionalVideo"
+            name="promotionalVideo"
+            type="file"
+            fullWidth
+            variant="outlined"
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Typography variant="body2">
+            Students who watch a well-made promo video are 5X more likely to
+            enroll in your course. We've seen that statistic go up to 10X for
+            exceptionally awesome videos. Learn how to make yours awesome!
+          </Typography>
         </Grid>
       </Grid>
     </React.Fragment>
