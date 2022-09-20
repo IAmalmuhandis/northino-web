@@ -1,45 +1,37 @@
 // assets
 import {
-    AppstoreAddOutlined,
-    AntDesignOutlined,
-    BarcodeOutlined,
-    BgColorsOutlined,
-    FontSizeOutlined,
-    LoadingOutlined
+SettingOutlined,
+UserOutlined
 } from '@ant-design/icons';
 
 // icons
 const icons = {
-    FontSizeOutlined,
-    BgColorsOutlined,
-    BarcodeOutlined,
-    AntDesignOutlined,
-    LoadingOutlined,
-    AppstoreAddOutlined
+  SettingOutlined,
+  UserOutlined,
 };
 
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
 
 const account = {
-    id: 'account',
-    title: 'Account Settings',
-    type: 'group',
-    children: [
-        {
-            id: 'profile',
-            title: 'Profile',
-            type: 'item',
-            url: '/profile',
-            icon: icons.FontSizeOutlined
-        },
-        {
-            id: 'settings',
-            title: 'Settings',
-            type: 'item',
-            url: '/settings',
-            icon: icons.FontSizeOutlined
-        }
-    ]
+  id: "account",
+  title: "Account Settings",
+  type: "group",
+  children: [
+    {
+      id: "profile",
+      title: "Profile",
+      type: "item",
+      url: "/profile",
+      icon: icons.UserOutlined,
+    },
+    {
+      id: "settings",
+      title: "Settings",
+      type: "item",
+      url: "/settings",
+      icon: icons.SettingOutlined,
+    },
+  ],
 };
 
 export default account;

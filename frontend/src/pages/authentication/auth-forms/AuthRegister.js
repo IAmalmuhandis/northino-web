@@ -62,7 +62,7 @@ const AuthRegister = () => {
           firstname: "",
           lastname: "",
           email: "",
-          company: "",
+          phoneNumber: "",
           password: "",
           submit: null,
         }}
@@ -110,7 +110,7 @@ const AuthRegister = () => {
                     name="firstname"
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    placeholder="John"
+                    placeholder="Abubakar"
                     fullWidth
                     error={Boolean(touched.firstname && errors.firstname)}
                   />
@@ -133,7 +133,7 @@ const AuthRegister = () => {
                     name="lastname"
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    placeholder="Doe"
+                    placeholder="Muhammad"
                     inputProps={{}}
                   />
                   {touched.lastname && errors.lastname && (
@@ -145,21 +145,23 @@ const AuthRegister = () => {
               </Grid>
               <Grid item xs={12}>
                 <Stack spacing={1}>
-                  <InputLabel htmlFor="company-signup">Company</InputLabel>
+                  <InputLabel htmlFor="phoneNumber-signup">
+                    Phone Number
+                  </InputLabel>
                   <OutlinedInput
                     fullWidth
-                    error={Boolean(touched.company && errors.company)}
-                    id="company-signup"
-                    value={values.company}
-                    name="company"
+                    error={Boolean(touched.phoneNumber && errors.phoneNumber)}
+                    id="phoneNumber-signup"
+                    value={values.phoneNumber}
+                    name="phoneNumber"
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    placeholder="Demo Inc."
+                    placeholder="Phone Number"
                     inputProps={{}}
                   />
-                  {touched.company && errors.company && (
-                    <FormHelperText error id="helper-text-company-signup">
-                      {errors.company}
+                  {touched.phoneNumber && errors.phoneNumber && (
+                    <FormHelperText error id="helper-text-phoneNumber-signup">
+                      {errors.phoneNumber}
                     </FormHelperText>
                   )}
                 </Stack>
@@ -176,7 +178,7 @@ const AuthRegister = () => {
                     name="email"
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    placeholder="demo@company.com"
+                    placeholder="example@gmail.com"
                     inputProps={{}}
                   />
                   {touched.email && errors.email && (

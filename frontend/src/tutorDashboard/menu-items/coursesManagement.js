@@ -1,45 +1,34 @@
 // assets
-import {
-    AppstoreAddOutlined,
-    AntDesignOutlined,
-    BarcodeOutlined,
-    BgColorsOutlined,
-    FontSizeOutlined,
-    LoadingOutlined
-} from '@ant-design/icons';
+import { UploadOutlined, FolderOpenOutlined } from "@ant-design/icons";
 
 // icons
 const icons = {
-    FontSizeOutlined,
-    BgColorsOutlined,
-    BarcodeOutlined,
-    AntDesignOutlined,
-    LoadingOutlined,
-    AppstoreAddOutlined
+  UploadOutlined,
+  FolderOpenOutlined,
 };
 
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
 
 const account = {
-    id: 'media',
-    title: 'Media Management',
-    type: 'group',
-    children: [
-        {
-            id: 'addVideo',
-            title: 'Add Video',
-            type: 'item',
-            url: '/addVideo',
-            icon: icons.FontSizeOutlined
-        },
-        {
-            id: 'ManageCourses',
-            title: 'Manage Courses',
-            type: 'item',
-            url: '/manageVideo',
-            icon: icons.FontSizeOutlined
-        }
-    ]
+  id: "media",
+  title: "Media Management",
+  type: "group",
+  children: [
+    {
+      id: "addVideo",
+      title: "Add Video",
+      type: "item",
+      url: "/addVideo",
+      icon: icons.UploadOutlined,
+    },
+    {
+      id: "ManageCourses",
+      title: "Manage Courses",
+      type: "item",
+      url: "/manageVideo",
+      icon: icons.FolderOpenOutlined,
+    },
+  ],
 };
 
 export default account;

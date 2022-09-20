@@ -1,1 +1,0 @@
-{"version":3,"sources":["tutorDashboard/pages/addVideo/addVideo.js"],"names":["addVideo"],"mappings":"sIAGeA,UAHE,WACb,OAAO","file":"static/js/7.ac666562.chunk.js","sourcesContent":["const addVideo = () => {\n    return <div>add Video</div>;\n};\nexport default addVideo;\n"],"sourceRoot":""}

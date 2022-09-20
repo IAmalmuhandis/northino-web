@@ -1,7 +1,7 @@
 import PhotographyRequestForm from "../components/Form/PhotographyRequestForm";
-import SignUpForm from "../components/Form/SignUpForm";
 import TutorSignUpForm from "../components/Form/TutorSignUpForm";
 import Navigation from "../layout/Navigation";
+import SignUpForm from "../components/Form/SignUpForm";
 const SignUp = (props) => {
   return (
     <div>
