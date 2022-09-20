@@ -6,7 +6,7 @@ import TextField from "@mui/material/TextField";
 export default function CourseMessage() {
   return (
     <React.Fragment>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="body2" gutterBottom>
         Write messages to your students (optional) that will be sent
         automatically when they join or complete your course to encourage
         students to engage with course content. If you do not wish to send a

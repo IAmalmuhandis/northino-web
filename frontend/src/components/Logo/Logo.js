@@ -1,5 +1,5 @@
 import classes from "./_logo.module.scss";
-import LogoImg from "../../img/northinoLogo.png";
+import LogoImg from "../../img/logo.png";
 import { Link } from "react-router-dom";
 
 const Logo = () => {
