@@ -1,47 +1,65 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
 
-export default function AddressForm() {
+import {
+  InputLabel,
+  Select,
+  MenuItem,
+  TextField,
+  Typography,
+} from "@mui/material";
+
+export default function CourseDetails() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Your profile details
+        New Course Details
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="firstName"
-            name="firstName"
-            label="First name"
+            id="courseTitle"
+            name="courseTitle"
+            label="Course Title"
             fullWidth
-            autoComplete="given-name"
-            variant="standard"
+            variant="outlined"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="lastName"
-            name="lastName"
-            label="Last name"
+            id="subtitleTitle"
+            name="subtitleTitle"
+            label="Course Subtitle"
             fullWidth
-            autoComplete="family-name"
+            variant="outlined"
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            id="courseDescription"
+            name="courseDescription"
+            label="Course Description"
+            fullWidth
             variant="standard"
           />
         </Grid>
         <Grid item xs={12}>
-          <TextField
-            required
-            id="email"
-            name="email"
-            label="Email Address"
+          <InputLabel id="account-type">--Select Level--</InputLabel>
+          <Select
+            labelId="level"
+            value="Level"
+            id="level"
+            onChange={""}
             fullWidth
-            autoComplete="email"
-            variant="standard"
-          />
+          >
+            <MenuItem value={"Beginner Level"}>Beginner Level</MenuItem>
+            <MenuItem value={"Intermediate Level"}>Intermediate Level</MenuItem>
+            <MenuItem value={"Expert Level"}>Expert Level</MenuItem>
+            <MenuItem value={"All Levels"}>All Levels</MenuItem>
+          </Select>
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
