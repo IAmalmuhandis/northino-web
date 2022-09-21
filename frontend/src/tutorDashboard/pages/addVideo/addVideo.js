@@ -1,58 +1,25 @@
-import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
-import Stepper from "@mui/material/Stepper";
-import Step from "@mui/material/Step";
-import StepLabel from "@mui/material/StepLabel";
-import Button from "@mui/material/Button";
-import Link from "@mui/material/Link";
-import Typography from "@mui/material/Typography";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import CourseDetails from "./CourseDetails";
-import CourseMessage from "./CourseMessage";
-import CoursePricing from "./CoursePricing";
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://northino.com/">
-        Northino
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-const steps = ["Course Details", "Course Message", "Pricing"];
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return <CourseDetails />;
-    case 1:
-      return <CourseMessage />;
-    case 2:
-      return <CoursePricing />;
-    default:
-      throw new Error("Unknown step");
-  }
-}
+import {
+  Grid,
+  TextField,
+  CssBaseline,
+  Paper,
+  Typography,
+  createTheme,
+  ThemeProvider,
+  Container,
+  InputLabel,
+  MenuItem,
+  Select,
+  Button,
+} from "@mui/material";
 
 const theme = createTheme();
 
-export default function Checkout() {
-  const [activeStep, setActiveStep] = React.useState(0);
-
-  const handleNext = () => {
-    setActiveStep(activeStep + 1);
+const addVideo = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+   
   };
-
-  const handleBack = () => {
-    setActiveStep(activeStep - 1);
-  };
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -62,50 +29,84 @@ export default function Checkout() {
           sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}
         >
           <Typography component="h1" variant="h4" align="center">
-            Add New Course
+            Add New Video
           </Typography>
-          <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-          <React.Fragment>
-            {activeStep === steps.length ? (
-              <React.Fragment>
-                <Typography variant="h5" gutterBottom>
-                  Thank you for completing your profile
-                </Typography>
-                <Typography variant="subtitle1">
-                  Your Tutor ID is #2001539. We have emailed your Details , and
-                  will send you an update when you verify your account.
-                </Typography>
-              </React.Fragment>
-            ) : (
-              <React.Fragment>
-                {getStepContent(activeStep)}
-                <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-                  {activeStep !== 0 && (
-                    <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
-                      Back
-                    </Button>
-                  )}
-
-                  <Button
-                    variant="contained"
-                    onClick={handleNext}
-                    sx={{ mt: 3, ml: 1 }}
-                  >
-                    {activeStep === steps.length - 1 ? "Publish Course" : "Save & Continue"}
-                  </Button>
-                </Box>
-              </React.Fragment>
-            )}
-          </React.Fragment>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="videoTitle"
+                name="videoTitle"
+                label="Video Title"
+                fullWidth
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="videoDesc"
+                name="videoDesc"
+                label="Video Description"
+                fullWidth
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <InputLabel id="uploadVideo">Upload Video Episode</InputLabel>
+              <TextField
+                required
+                id="uploadVideo"
+                name="uploadVideo"
+                type="file"
+                fullWidth
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Typography variant="body2">
+                Upload Video Episode. which will be added to your selected
+                course.It must meet our episode video quality standards to be
+                accepted. Above 30 minutes and format .mp4, or .mkv no text on
+                the video.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <InputLabel id="coursesList">--Your Course--</InputLabel>
+              <Select
+                labelId="courseList"
+                value="courseList"
+                id="courseList"
+                onChange={""}
+                fullWidth
+              >
+                <MenuItem value={"Development"}>Development</MenuItem>
+                <MenuItem value={"Business"}>Business</MenuItem>
+                <MenuItem value={"Finance & Accounting"}>
+                  Finance & Accounting
+                </MenuItem>
+                <MenuItem value={"IT & Software"}>IT & Software</MenuItem>
+                <MenuItem value={"Office Productivity"}>
+                  Office Productivity
+                </MenuItem>
+                <MenuItem value={"Personal Development"}>
+                  Personal Development
+                </MenuItem>
+                <MenuItem value={"Design"}>Design</MenuItem>
+                <MenuItem value={"Marketing"}>Marketing</MenuItem>
+              </Select>
+            </Grid>
+          </Grid>
+          <Button
+            variant="contained"
+            onClick={handleSubmit}
+            sx={{ mt: 3, ml: 1 }}
+          >
+            Publish Video
+          </Button>
         </Paper>
-        <Copyright />
       </Container>
     </ThemeProvider>
   );
-}
+};
+export default addVideo;

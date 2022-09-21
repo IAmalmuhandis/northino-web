@@ -21,11 +21,14 @@ const TutorDashboard = Loadable(
   lazy(() => import("./tutorDashboard/pages/dashboard"))
 );
 // render - Media
+const AddCourse = Loadable(
+  lazy(() => import("./tutorDashboard/pages/addCourse/addCourse"))
+);
 const AddVideo = Loadable(
   lazy(() => import("./tutorDashboard/pages/addVideo/addVideo"))
 );
-const ManageVideo = Loadable(
-  lazy(() => import("./tutorDashboard/pages/manageVideo/manageVideo"))
+const ManageCourses = Loadable(
+  lazy(() => import("./tutorDashboard/pages/manageCourses/manageCourses"))
 );
 // render - subsriptions
 const RecievedPayments = Loadable(
@@ -65,8 +68,9 @@ function App() {
           <Route path="/about-northino" element={<AboutUs />} />
           <Route element={<MainLayout />}>
             <Route path="/tutor-dashboard" element={<TutorDashboard />} />
+            <Route path="/addCourse" element={<AddCourse />} />
             <Route path="/addVideo" element={<AddVideo />} />
-            <Route path="/manageVideo" element={<ManageVideo />} />
+            <Route path="/manageCourses" element={<ManageCourses />} />
             <Route path="/recievedPayments" element={<RecievedPayments />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/settings" element={<Settings />} />
