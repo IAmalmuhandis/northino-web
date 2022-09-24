@@ -1,4 +1,4 @@
-import LogoImg from "../img/northinoLogo.png";
+import LogoImg from "../img/logo.png";
 
 import classes from "./_footer.module.scss";
 import { Link } from "react-router-dom";

@@ -82,7 +82,6 @@ export default function AddressForm() {
             name="picture"
             type="file"
             fullWidth
-            autoComplete="shipping postal-code"
             variant="standard"
           />
         </Grid>
