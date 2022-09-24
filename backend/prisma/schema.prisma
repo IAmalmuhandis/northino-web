@@ -36,7 +36,7 @@ model mentors {
   fieldOfExperience String  @db.VarChar(255)
   about             String? @db.VarChar(255)
   picture           String? @default("mentor.jpg") @db.VarChar(255)
-  uniqueId          String? @db.VarChar(255)
+  uniqueId          String? @db.VarChar(225)
 }
 
 model northino_tv {
@@ -80,4 +80,67 @@ model subscribers {
   id            Int    @id @default(autoincrement())
   full_name     String @db.VarChar(255)
   email_address String @db.VarChar(45)
+}
+
+model bank_details {
+  id             Int    @id @default(autoincrement())
+  account_name   String @db.VarChar(255)
+  account_number String @db.VarChar(255)
+  bank_name      String @db.VarChar(255)
+}
+
+model course_info {
+  id                     Int    @id @default(autoincrement())
+  course_title           String @db.VarChar(255)
+  course_subtitle        String @db.VarChar(255)
+  course_desc            String @db.LongText
+  level                  String @db.VarChar(255)
+  course_category        String @db.VarChar(255)
+  course_image_url       String @db.VarChar(255)
+  promotional_video_url  String @db.VarChar(255)
+  welcome_message        String @db.LongText
+  congratulation_message String @db.LongText
+  course_price           Float
+}
+
+model images {
+  id         Int     @id @default(autoincrement())
+  image_url  String? @db.VarChar(100)
+  image_name String? @db.VarChar(255)
+}
+
+model learner_signup {
+  id           Int       @id @default(autoincrement())
+  firstname    String    @db.VarChar(255)
+  lastname     String    @db.VarChar(255)
+  phone_number String    @db.VarChar(255)
+  email        String    @db.VarChar(255)
+  password     String    @db.VarChar(255)
+  timestamp    DateTime? @default(now()) @db.Timestamp(0)
+}
+
+model tutor_signup {
+  id           Int       @id @default(autoincrement())
+  firstname    String    @db.VarChar(255)
+  lastname     String    @db.VarChar(255)
+  phone_number String    @db.VarChar(255)
+  email        String    @db.VarChar(255)
+  password     String    @db.VarChar(255)
+  experience   String    @db.LongText
+  description  String    @db.LongText
+  image        String    @db.VarChar(255)
+  timestamp    DateTime? @default(now()) @db.Timestamp(0)
+}
+
+model tutor_video {
+  id            Int    @id @default(autoincrement())
+  video_url     String @db.VarChar(255)
+  video_desc    String @db.LongText
+  video_img_url String @db.VarChar(255)
+}
+
+model videos {
+  id         Int    @id @default(autoincrement())
+  video_url  String @db.VarChar(1000)
+  video_name String @db.VarChar(255)
 }
