@@ -1,0 +1,1 @@
+{"version":3,"sources":["tutorDashboard/pages/settings/settings.js"],"names":["settings"],"mappings":"uIAGeA,UAHE,WACb,OAAO","file":"static/js/13.714b8ec1.chunk.js","sourcesContent":["const settings = () => {\r\n    return <div>see settings here</div>;\r\n};\r\nexport default settings;\r\n"],"sourceRoot":""}

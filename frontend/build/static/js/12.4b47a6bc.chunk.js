@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-course"]=this["webpackJsonpreact-course"]||[]).push([[12],{940:function(e,c,t){"use strict";t.r(c);var r=t(0);c.default=function(){return Object(r.jsx)("div",{children:"Manage Video"})}}}]);
+//# sourceMappingURL=12.4b47a6bc.chunk.js.map

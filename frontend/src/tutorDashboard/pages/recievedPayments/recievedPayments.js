@@ -21,6 +21,9 @@ import NumberFormat from "react-number-format";
 
 // project import
 import Dot from "../../components/@extended/Dot";
+function createData(trackingNo, name, fat, carbs, protein) {
+  return { trackingNo, name, fat, carbs, protein };
+}
 
 const rows = [
   createData(84564564, "Canva Beginners Tutorial", "06/07/2022", 2, 40570),

@@ -32,7 +32,7 @@ const ManageCourses = Loadable(
 );
 // render - subsriptions
 const RecievedPayments = Loadable(
-  lazy(() => import("./tutorDashboard/pages/recievedPayments/recievedPayments"))
+  lazy(() => import("./tutorDashboard/pages/recievedPayments/RecievedPayments"))
 );
 // render - account
 const Profile = Loadable(

@@ -1,0 +1,1 @@
+{"version":3,"sources":["tutorDashboard/pages/supportTeam/supportTeam.js"],"names":["supportTeam"],"mappings":"uIAGeA,UAHK,WAChB,OAAO","file":"static/js/14.11b10728.chunk.js","sourcesContent":["const supportTeam = () => {\r\n    return <div>contact support team here</div>;\r\n};\r\nexport default supportTeam;\r\n"],"sourceRoot":""}

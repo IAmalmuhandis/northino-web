@@ -1,0 +1,1 @@
+{"version":3,"sources":["tutorDashboard/pages/manageCourses/manageCourses.js"],"names":["manageCourses"],"mappings":"uIAGeA,UAHO,WACpB,OAAO","file":"static/js/12.4b47a6bc.chunk.js","sourcesContent":["const manageCourses = () => {\n  return <div>Manage Video</div>;\n};\nexport default manageCourses;\n"],"sourceRoot":""}
