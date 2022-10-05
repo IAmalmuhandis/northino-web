@@ -23,13 +23,13 @@ import {
 import MainCard from "../../../../../adminDashboard/components/MainCard";
 import Transitions from "../../../../../adminDashboard/components/@extended/Transitions";
 import ProfileTab from "./ProfileTab";
-import SettingTab from "./SettingTab";
+
 
 // assets
 import avatar1 from "../../../../../adminDashboard/assets/images/users/avatar.jpeg";
 import {
   LogoutOutlined,
-  SettingOutlined,
+  
   UserOutlined,
 } from "@ant-design/icons";
 
@@ -219,9 +219,7 @@ const Profile = () => {
                         <TabPanel value={value} index={0} dir={theme.direction}>
                           <ProfileTab handleLogout={handleLogout} />
                         </TabPanel>
-                        <TabPanel value={value} index={1} dir={theme.direction}>
-                          <SettingTab />
-                        </TabPanel>
+                       
                       </>
                     )}
                   </MainCard>
