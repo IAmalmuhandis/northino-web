@@ -36,10 +36,10 @@ const ManageCourses = Loadable(
 );
 // render - Media Admin
 const AdminAddCourse = Loadable(
-  lazy(() => import("./tutorDashboard/pages/addCourse/addCourse"))
+  lazy(() => import("./adminDashboard/pages/addCourse/addCourse"))
 );
 const AdminAddVideo = Loadable(
-  lazy(() => import("./tutorDashboard/pages/addVideo/addVideo"))
+  lazy(() => import("./adminDashboard/pages/addVideo/addVideo"))
 );
 const AdminManageCourses = Loadable(
   lazy(() => import("./tutorDashboard/pages/manageCourses/manageCourses"))
@@ -50,7 +50,7 @@ const RecievedPayments = Loadable(
 );
 // render - subsriptions Admin
 const AdminRecievedPayments = Loadable(
-  lazy(() => import("./tutorDashboard/pages/recievedPayments/RecievedPayments"))
+  lazy(() => import("./adminDashboard/pages/recievedPayments/RecievedPayments"))
 );
 // render - account
 const Profile = Loadable(

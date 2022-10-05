@@ -18,18 +18,20 @@ const theme = createTheme();
 const addVideo = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-   
   };
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Grid item xs={12} sx={{ mb: -2.25 }}>
+        <Typography variant="h5">Upload youtube Video</Typography>
+      </Grid>
       <Container component="main" maxWidth="md" sx={{ mb: 4 }}>
         <Paper
           variant="outlined"
           sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}
         >
           <Typography component="h1" variant="h4" align="center">
-            Add New Video
+            Add Youtube Video{" "}
           </Typography>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
@@ -53,22 +55,20 @@ const addVideo = () => {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <InputLabel id="uploadVideo">Upload Video Episode</InputLabel>
+              <InputLabel id="uploadVideo">Youtube Embeded url</InputLabel>
               <TextField
                 required
                 id="uploadVideo"
                 name="uploadVideo"
-                type="file"
+                type="text"
                 fullWidth
                 variant="outlined"
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <Typography variant="body2">
-                Upload Video Episode. which will be added to your selected
-                course.It must meet our episode video quality standards to be
-                accepted. Above 30 minutes and format .mp4, or .mkv no text on
-                the video.
+                Please make sure you have copied the embeded link from youtube.
+                <br /> Select the course you are posting the video below.
               </Typography>
             </Grid>
             <Grid item xs={12} sm={6}>

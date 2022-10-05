@@ -1,5 +1,9 @@
 // assets
-import {PlusCircleFilled, UploadOutlined, FolderOpenOutlined } from "@ant-design/icons";
+import {
+  PlusCircleFilled,
+  UploadOutlined,
+  FolderOpenOutlined,
+} from "@ant-design/icons";
 
 // icons
 const icons = {
@@ -17,7 +21,7 @@ const account = {
   children: [
     {
       id: "addVideo",
-      title: "Add Video",
+      title: "Add Youtube Video",
       type: "item",
       url: "/addVideo",
       icon: icons.PlusCircleFilled,
