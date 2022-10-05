@@ -38,7 +38,7 @@ const ManageCourses = Loadable(
 // render - Members Admin
 const RegisteredMembers = Loadable(
   lazy(() =>
-    import("./adminDashboard/pages/RegisteredMembers/RegisteredMembers")
+    import("./adminDashboard/pages/registeredMembers/RegisteredMembers")
   )
 );
 const Subscribers = Loadable(
