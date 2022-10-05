@@ -20,6 +20,10 @@ import TutorRegistryType from "./pages/TutorRegistryType";
 const TutorDashboard = Loadable(
   lazy(() => import("./tutorDashboard/pages/dashboard"))
 );
+// render - Admin dashboard
+const AdminDashboard = Loadable(
+  lazy(() => import("./adminDashboard/pages/dashboard"))
+);
 // render - Media
 const AddCourse = Loadable(
   lazy(() => import("./tutorDashboard/pages/addCourse/addCourse"))
@@ -30,8 +34,22 @@ const AddVideo = Loadable(
 const ManageCourses = Loadable(
   lazy(() => import("./tutorDashboard/pages/manageCourses/manageCourses"))
 );
+// render - Media Admin
+const AdminAddCourse = Loadable(
+  lazy(() => import("./tutorDashboard/pages/addCourse/addCourse"))
+);
+const AdminAddVideo = Loadable(
+  lazy(() => import("./tutorDashboard/pages/addVideo/addVideo"))
+);
+const AdminManageCourses = Loadable(
+  lazy(() => import("./tutorDashboard/pages/manageCourses/manageCourses"))
+);
 // render - subsriptions
 const RecievedPayments = Loadable(
+  lazy(() => import("./tutorDashboard/pages/recievedPayments/RecievedPayments"))
+);
+// render - subsriptions Admin
+const AdminRecievedPayments = Loadable(
   lazy(() => import("./tutorDashboard/pages/recievedPayments/RecievedPayments"))
 );
 // render - account
@@ -67,6 +85,7 @@ function App() {
           <Route path="/northino-services" element={<NorthinoServices />} />
           <Route path="/about-northino" element={<AboutUs />} />
           <Route element={<MainLayout />}>
+            {/* Tutors Dashboard */}
             <Route path="/tutor-dashboard" element={<TutorDashboard />} />
             <Route path="/addCourse" element={<AddCourse />} />
             <Route path="/addVideo" element={<AddVideo />} />
@@ -76,6 +95,18 @@ function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/supportTeam" element={<SupportTeam />} />
             <Route path="/FAQS" element={<FAQS />} />
+            {/* Admin Dashboard */}
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/admin/addCourse" element={<AdminAddCourse />} />
+            <Route path="/admin/addVideo" element={<AdminAddVideo />} />
+            <Route
+              path="/admin/manageCourses"
+              element={<AdminManageCourses />}
+            />
+            <Route
+              path="/admin/recievedPayments"
+              element={<AdminRecievedPayments />}
+            />
           </Route>
           <Route
             path="/contact-us"
