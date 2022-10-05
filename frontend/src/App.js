@@ -13,6 +13,7 @@ import SignUp from "./pages/SignUp";
 import ThemeCustomization from "./tutorDashboard/themes";
 import ScrollTop from "./tutorDashboard/components/ScrollTop";
 import MainLayout from "./layout/MainLayout";
+import AdminMainLayout from "./layout/AdminMainLayout";
 import Loadable from "./tutorDashboard/components/Loadable";
 import TutorRegistryType from "./pages/TutorRegistryType";
 
@@ -95,6 +96,8 @@ function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/supportTeam" element={<SupportTeam />} />
             <Route path="/FAQS" element={<FAQS />} />
+          </Route>
+          <Route element={<AdminMainLayout />}>
             {/* Admin Dashboard */}
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/admin/addCourse" element={<AdminAddCourse />} />
