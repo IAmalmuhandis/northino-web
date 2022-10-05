@@ -55,11 +55,11 @@ const addVideo = () => {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <InputLabel id="uploadVideo">Youtube Embeded url</InputLabel>
               <TextField
                 required
                 id="uploadVideo"
                 name="uploadVideo"
+                label="Youtube Embeded url"
                 type="text"
                 fullWidth
                 variant="outlined"

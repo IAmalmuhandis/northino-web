@@ -14,7 +14,7 @@ const dashboard = {
       id: "dashboard",
       title: "Dashboard",
       type: "item",
-      url: "/tutor-dashboard",
+      url: "/admin/dashboard",
       icon: icons.ProfileOutlined,
       breadcrumbs: false,
     },

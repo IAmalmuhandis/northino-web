@@ -35,6 +35,15 @@ const AddVideo = Loadable(
 const ManageCourses = Loadable(
   lazy(() => import("./tutorDashboard/pages/manageCourses/manageCourses"))
 );
+// render - Members Admin
+const RegisteredMembers = Loadable(
+  lazy(() =>
+    import("./adminDashboard/pages/RegisteredMembers/RegisteredMembers")
+  )
+);
+const Subscribers = Loadable(
+  lazy(() => import("./adminDashboard/pages/subscribers/Subscribers"))
+);
 // render - Media Admin
 const AdminAddCourse = Loadable(
   lazy(() => import("./adminDashboard/pages/addCourse/addCourse"))
@@ -100,6 +109,11 @@ function App() {
           <Route element={<AdminMainLayout />}>
             {/* Admin Dashboard */}
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route
+              path="/admin/registeredMembers"
+              element={<RegisteredMembers />}
+            />
+            <Route path="/admin/subscribers" element={<Subscribers />} />
             <Route path="/admin/addCourse" element={<AdminAddCourse />} />
             <Route path="/admin/addVideo" element={<AdminAddVideo />} />
             <Route

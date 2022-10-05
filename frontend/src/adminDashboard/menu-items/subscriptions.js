@@ -17,7 +17,7 @@ const subscriptions = {
             id: 'util-typography',
             title: 'Recieved Payments',
             type: 'item',
-            url: '/recievedPayments',
+            url: '/admin/recievedPayments',
             icon: icons.DollarCircleOutlined
         }
     ]
