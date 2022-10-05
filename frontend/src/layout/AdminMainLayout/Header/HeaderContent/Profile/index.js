@@ -4,7 +4,6 @@ import { useRef, useState } from "react";
 // material-ui
 import { useTheme } from "@mui/material/styles";
 import {
-  Avatar,
   Box,
   ButtonBase,
   CardContent,
@@ -23,7 +22,6 @@ import Transitions from "../../../../../adminDashboard/components/@extended/Tran
 import ProfileTab from "./ProfileTab";
 
 // assets
-import avatar1 from "../../../../../adminDashboard/assets/images/users/avatar.jpeg";
 import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
 
 // tab panel wrapper
@@ -47,13 +45,6 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
-function a11yProps(index) {
-  return {
-    id: `profile-tab-${index}`,
-    "aria-controls": `profile-tabpanel-${index}`,
-  };
-}
-
 // ==============================|| HEADER CONTENT - PROFILE ||============================== //
 
 const Profile = () => {
@@ -76,12 +67,6 @@ const Profile = () => {
     setOpen(false);
   };
 
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   const iconBackColorOpen = "grey.300";
 
   return (
@@ -100,11 +85,7 @@ const Profile = () => {
         onClick={handleToggle}
       >
         <Stack direction="row" spacing={2} alignItems="center" sx={{ p: 0.5 }}>
-          <Avatar
-            alt="profile user"
-            src={avatar1}
-            sx={{ width: 32, height: 32 }}
-          />
+          <UserOutlined />
           <Typography variant="subtitle1">ADMINISTRATOR</Typography>
         </Stack>
       </ButtonBase>
@@ -176,7 +157,7 @@ const Profile = () => {
                     </CardContent>
                     {open && (
                       <>
-                        <TabPanel value={value} index={0} dir={theme.direction}>
+                        <TabPanel index={0} dir={theme.direction}>
                           <ProfileTab handleLogout={handleLogout} />
                         </TabPanel>
                       </>
