@@ -14,8 +14,6 @@ import {
   Paper,
   Popper,
   Stack,
-  Tab,
-  Tabs,
   Typography,
 } from "@mui/material";
 
@@ -24,14 +22,9 @@ import MainCard from "../../../../../adminDashboard/components/MainCard";
 import Transitions from "../../../../../adminDashboard/components/@extended/Transitions";
 import ProfileTab from "./ProfileTab";
 
-
 // assets
 import avatar1 from "../../../../../adminDashboard/assets/images/users/avatar.jpeg";
-import {
-  LogoutOutlined,
-  
-  UserOutlined,
-} from "@ant-design/icons";
+import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
 
 // tab panel wrapper
 function TabPanel({ children, value, index, ...other }) {
@@ -161,11 +154,7 @@ const Profile = () => {
                             spacing={1.25}
                             alignItems="center"
                           >
-                            <Avatar
-                              alt="profile user"
-                              src={avatar1}
-                              sx={{ width: 32, height: 32 }}
-                            />
+                            <UserOutlined />
                             <Stack>
                               <Typography variant="h6">NORTHINO</Typography>
                               <Typography variant="body2" color="textSecondary">
@@ -187,39 +176,9 @@ const Profile = () => {
                     </CardContent>
                     {open && (
                       <>
-                        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-                          <Tabs
-                            variant="fullWidth"
-                            value={value}
-                            onChange={handleChange}
-                            aria-label="profile tabs"
-                          >
-                            <Tab
-                              sx={{
-                                display: "flex",
-                                flexDirection: "row",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                textTransform: "capitalize",
-                              }}
-                              icon={
-                                <UserOutlined
-                                  style={{
-                                    marginBottom: 0,
-                                    marginRight: "10px",
-                                  }}
-                                />
-                              }
-                              label="Profile"
-                              {...a11yProps(0)}
-                            />
-                         
-                          </Tabs>
-                        </Box>
                         <TabPanel value={value} index={0} dir={theme.direction}>
                           <ProfileTab handleLogout={handleLogout} />
                         </TabPanel>
-                       
                       </>
                     )}
                   </MainCard>
