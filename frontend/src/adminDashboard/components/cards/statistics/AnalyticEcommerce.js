@@ -60,7 +60,7 @@ const AnalyticEcommerce = ({
     </Stack>
      <Box sx={{ pt: 2.25 }}>
       <Typography variant="caption" color="textSecondary">
-         {type === "earnings" ? "You made an extra" : "You have uploaded"}
+         {type === "earnings" ? "You made an extra" : type === "videos" ? "You have uploaded" : type === "courses" ? "You have created " : "You have got"} &nbsp;
         <Typography
           component="span"
           variant="caption"
@@ -68,7 +68,7 @@ const AnalyticEcommerce = ({
         >
           {extra}
         </Typography>{" "}
-        {type === "earnings" ? "" : type === "courses" ? "" : type === "videos" ? "" : "" } this year.
+        {type === "earnings" ? " earnings" : type === "courses" ? " courses" : type === "videos" ? " videos" : " New Students" } this year.
       </Typography>
     </Box>
    

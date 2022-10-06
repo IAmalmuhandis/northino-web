@@ -3,7 +3,6 @@ import { useState } from "react";
 // material-ui
 import {
   Avatar,
- 
   Box,
   Button,
   Grid,
@@ -76,7 +75,12 @@ const DashboardDefault = () => {
         <Typography variant="h5">Admin Dashboard</Typography>
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
-        <AnalyticEcommerce title="Total Students" count="2000" />
+        <AnalyticEcommerce
+          title="Total Students"
+          percentage={20}
+          count="200,000"
+          extra="15,000"
+        />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <AnalyticEcommerce
@@ -85,13 +89,24 @@ const DashboardDefault = () => {
           percentage={70.5}
           extra="8,900"
           type="earnings"
+          isLoss
         />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
-        <AnalyticEcommerce title="Total videos uploads" count="700" isLoss />
+        <AnalyticEcommerce
+          title="Total videos uploads"
+          extra="100"
+          count="700"
+          type="videos"
+        />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
-        <AnalyticEcommerce title="Total Course" count="10" isLoss />
+        <AnalyticEcommerce
+          title="Total Course"
+          extra="5"
+          type="courses"
+          count="10"
+        />
       </Grid>
       <Grid
         item
@@ -150,8 +165,6 @@ const DashboardDefault = () => {
           <MonthlyBarChart />
         </MainCard>
       </Grid>
-
-      {/* row 3 */}
       <Grid item xs={12} md={7} lg={8}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item>
@@ -184,8 +197,6 @@ const DashboardDefault = () => {
           <ReportAreaChart />
         </MainCard>
       </Grid>
-
-      {/* row 4 */}
       <Grid item xs={12} md={7} lg={8}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item>
