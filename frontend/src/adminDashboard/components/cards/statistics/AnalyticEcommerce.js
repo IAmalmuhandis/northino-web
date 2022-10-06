@@ -18,6 +18,7 @@ const AnalyticEcommerce = ({
   percentage,
   isLoss,
   extra,
+  type,
 }) => (
   <MainCard contentSX={{ p: 2.25 }}>
     <Stack spacing={0.5}>
@@ -57,9 +58,9 @@ const AnalyticEcommerce = ({
         )}
       </Grid>
     </Stack>
-    <Box sx={{ pt: 2.25 }}>
+     <Box sx={{ pt: 2.25 }}>
       <Typography variant="caption" color="textSecondary">
-        You made an extra{" "}
+         {type === "earnings" ? "You made an extra" : "You have uploaded"}
         <Typography
           component="span"
           variant="caption"
@@ -67,9 +68,10 @@ const AnalyticEcommerce = ({
         >
           {extra}
         </Typography>{" "}
-        this year
+        {type === "earnings" ? "" : type === "courses" ? "" : type === "videos" ? "" : "" } this year.
       </Typography>
     </Box>
+   
   </MainCard>
 );
 

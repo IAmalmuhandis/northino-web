@@ -3,7 +3,7 @@ import { useState } from "react";
 // material-ui
 import {
   Avatar,
-  AvatarGroup,
+ 
   Box,
   Button,
   Grid,
@@ -29,9 +29,6 @@ import AnalyticEcommerce from "../../components/cards/statistics/AnalyticEcommer
 
 // assets
 import { TransactionOutlined } from "@ant-design/icons";
-import avatar1 from "../../assets/images/users/ceo.jpg";
-import avatar2 from "../../assets/images/users/kalsom.jpg";
-import avatar3 from "../../assets/images/users/sanee.jpg";
 
 // avatar style
 const avatarSX = {
@@ -79,7 +76,7 @@ const DashboardDefault = () => {
         <Typography variant="h5">Admin Dashboard</Typography>
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
-        <AnalyticEcommerce title="Total Students" count="4,42,236" />
+        <AnalyticEcommerce title="Total Students" count="2000" />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <AnalyticEcommerce
@@ -87,21 +84,20 @@ const DashboardDefault = () => {
           count="78,250"
           percentage={70.5}
           extra="8,900"
+          type="earnings"
         />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
-        <AnalyticEcommerce title="Total videos uploads" count="18,800" isLoss />
+        <AnalyticEcommerce title="Total videos uploads" count="700" isLoss />
       </Grid>
-      {/* <Grid item xs={12} sm={6} md={4} lg={3}>
-                <AnalyticEcommerce title="Total Mentees" count="$35,078" percentage={27.4} isLoss color="warning" extra="$20,395" />
-            </Grid> */}
-
+      <Grid item xs={12} sm={6} md={4} lg={3}>
+        <AnalyticEcommerce title="Total Course" count="10" isLoss />
+      </Grid>
       <Grid
         item
         md={8}
         sx={{ display: { sm: "none", md: "block", lg: "none" } }}
       />
-
       {/* row 2 */}
       <Grid item xs={12} md={7} lg={8}>
         <Grid container alignItems="center" justifyContent="space-between">
@@ -339,7 +335,7 @@ const DashboardDefault = () => {
             </ListItemButton>
           </List>
         </MainCard>
-        <MainCard sx={{ mt: 2 }}>
+        {/* <MainCard sx={{ mt: 2 }}>
           <Stack spacing={3}>
             <Grid container justifyContent="space-between" alignItems="center">
               <Grid item>
@@ -370,7 +366,7 @@ const DashboardDefault = () => {
               Need Help?
             </Button>
           </Stack>
-        </MainCard>
+        </MainCard> */}
       </Grid>
     </Grid>
   );
