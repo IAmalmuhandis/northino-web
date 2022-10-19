@@ -1,13 +1,22 @@
+/** @format */
+
 const express = require("express");
 const prisma = require("../db");
 const router = express.Router();
+
 router.post("/addVideo", async (req, res) => {
   const { section_type, video_url, video_title, video_description } = req.body;
+
+  if (!(section_type && video_url && video_title && video_description)) {
+    return res.status(400).json("Input cannot be empty");
+  }
+
   const find = await prisma.northino_tv.findFirst({
     where: {
       video_url: { contains: video_url },
     },
   });
+
   if (find !== null) {
     res.status(500).json({ err: "Video already exist" });
   } else {
@@ -19,14 +28,18 @@ router.post("/addVideo", async (req, res) => {
         video_description,
       },
     });
-    res.json({ section_type, video_url, video_title, video_description });
+    res
+      .status(200)
+      .json({ section_type, video_url, video_title, video_description });
   }
 });
+
 router.get("/getVideos", async (req, res) => {
   const find = await prisma.northino_tv.findMany({});
-  res.json(find);
+  return res.status(200).json(find);
 });
-router.put("/:id", async (req, res) => {
+
+router.put("/updateVideo/:id", async (req, res) => {
   const { section_type, video_url, video_title, video_description } = req.body;
   const { id } = req.params;
   const update = await prisma.northino_tv.update({
@@ -40,15 +53,17 @@ router.put("/:id", async (req, res) => {
       video_description,
     },
   });
-  res.status(200).json({ success: "Record updated successfully " });
+  res.status(200).json({ success: "Video updated successfully " });
 });
-router.delete("/:id", async (req, res) => {
+
+router.delete("/deleteVideo/:id", async (req, res) => {
   const { id } = req.params;
   const del = await prisma.northino_tv.delete({
     where: {
       id: parseInt(id),
     },
   });
-  res.status(200).json({ err: "Record deleted successfully " });
+  res.status(200).json({ err: "Video deleted successfully " });
 });
+
 module.exports = router;

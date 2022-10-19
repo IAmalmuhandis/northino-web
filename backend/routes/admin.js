@@ -167,7 +167,7 @@ router.post("/uploadVideo", async (req, res) => {
   }
 
   try {
-    const result = await cloudinary.uploader.upload_large(
+    await cloudinary.uploader.upload_large(
       video_url,
       {
         resource_type: "video",
@@ -178,33 +178,11 @@ router.post("/uploadVideo", async (req, res) => {
         if (err) {
           return res.json(err);
         }
-         prisma.videos.create({
-        data: {
-          video_url: result.url,
-          video_name: result.public_id,
-        },
-      });
-       res.status(200).json({
-        Success: "Saved",
-      });
         return res.status(200).json(result);
       }
     );
-
-    //console.log(result);
-    // if (result) {
-    //   await prisma.videos.create({
-    //     data: {
-    //       video_url: result.url,
-    //       video_name: result.public_id,
-    //     },
-    //   });
-    //   return res.status(200).json({
-    //     Success: "Saved",
-    //   });
-    // }
   } catch (error) {
-    return res.json(error.message);
+    res.json(error.message);
   }
 });
 

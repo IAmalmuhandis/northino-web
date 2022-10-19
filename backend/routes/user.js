@@ -6,7 +6,9 @@ const prisma = require("../db");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
-cloudinary.config();
+cloudinary.config({
+  secure: true,
+});
 
 router.post("/learnerSignup", async (req, res) => {
   try {
@@ -69,7 +71,7 @@ router.post("/learnerLogin", async (req, res) => {
     });
 
     if (!user) {
-      return res.status(404).json({ Success: "User Not Found"});
+      return res.status(404).json({ Success: "User Not Found" });
     } else if (
       user.email === email &&
       user &&
@@ -113,7 +115,8 @@ router.post("/tutorSignup", async (req, res) => {
         email &&
         password &&
         experience &&
-        description
+        description &&
+        image
       )
     ) {
       return res.status(400).send("Input cannot be empty");
@@ -130,18 +133,30 @@ router.post("/tutorSignup", async (req, res) => {
     } else {
       encryptPassword = await bcrypt.hash(password, 10);
 
-      const user = await prisma.tutor_signup.create({
-        data: {
-          firstname: firstname,
-          lastname: lastname,
-          phone_number: phone_number,
-          email: email,
-          password: encryptPassword,
-          experience: experience,
-          description: description,
-          image: image,
-        },
-      });
+      const image = await cloudinary.uploader.upload(
+        image,
+        {
+          public_id: firstname + "-" + lastname,
+        }
+      );
+
+      console.log(image);
+      if (image) {
+        const user = await prisma.tutor_signup.create({
+          data: {
+            firstname: firstname,
+            lastname: lastname,
+            phone_number: phone_number,
+            email: email,
+            password: encryptPassword,
+            experience: experience,
+            description: description,
+            image: image.url,
+          },
+        });
+      }
+    
+      
 
       const token = jwt.sign(
         { user_id: user.id, email },
@@ -228,6 +243,7 @@ router.post("/course", async (req, res) => {
     ) {
       return res.status(400).json("Input cannot be empty");
     } else {
+      const image = await cloudinary.uploader.upload(image_url);
       const result = await prisma.course_info.create({
         data: {
           course_title,
@@ -235,7 +251,7 @@ router.post("/course", async (req, res) => {
           course_desc,
           level,
           course_category,
-          course_image_url,
+          course_image_url: image.url,
           promotional_video_url,
           welcome_message,
           congratulation_message,
