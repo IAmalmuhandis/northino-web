@@ -15,7 +15,7 @@ import App from "./App";
 ReactDOM.render(
   <StrictMode>
     <ReduxProvider store={store}>
-      <Router basename="/northino">
+      <Router basename="/">
         <App />
       </Router>
     </ReduxProvider>

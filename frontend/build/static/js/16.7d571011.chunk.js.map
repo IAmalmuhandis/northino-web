@@ -1,0 +1,1 @@
+{"version":3,"sources":["adminDashboard/pages/subscribers/Subscribers.js"],"names":["Subscribers"],"mappings":"uIAGeA,UAHK,WAClB,OAAO","file":"static/js/16.7d571011.chunk.js","sourcesContent":["const Subscribers = () => {\r\n  return <div>Subscribers</div>;\r\n};\r\nexport default Subscribers;\r\n"],"sourceRoot":""}

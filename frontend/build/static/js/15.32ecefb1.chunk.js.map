@@ -1,0 +1,1 @@
+{"version":3,"sources":["adminDashboard/pages/registeredMembers/RegisteredMembers.js"],"names":["RegisteredMembers"],"mappings":"uIAGeA,UAHW,WACxB,OAAO","file":"static/js/15.32ecefb1.chunk.js","sourcesContent":["const RegisteredMembers = () => {\r\n  return <div>Registered Members</div>;\r\n};\r\nexport default RegisteredMembers;\r\n"],"sourceRoot":""}
