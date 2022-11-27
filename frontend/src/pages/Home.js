@@ -12,8 +12,9 @@ const Home = () => {
       <Navigation />
       <HeroSection
         pageNo="1"
-        mainHeader="northino"
-        subHeader="North Innovation"
+        mainHeaderPart1="north"
+        mainHeaderPart2="ino"
+        subHeader="Iliminku Jarinku"
         headerType="header"
         styleType=""
       />

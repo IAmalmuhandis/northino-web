@@ -1,3 +1,5 @@
+/** @format */
+
 import PropTypes from "prop-types";
 
 // material-ui
@@ -21,12 +23,12 @@ const AnalyticEcommerce = ({
 }) => (
   <MainCard contentSX={{ p: 2.25 }}>
     <Stack spacing={0.5}>
-      <Typography variant="h6" color="textSecondary">
+      <Typography variant="h6" style={{ color: "#333652" }}>
         {title}
       </Typography>
       <Grid container alignItems="center">
         <Grid item>
-          <Typography variant="h4" color="inherit">
+          <Typography variant="h4" style={{ color: "#333652" }}>
             {count}
           </Typography>
         </Grid>
@@ -34,23 +36,23 @@ const AnalyticEcommerce = ({
           <Grid item>
             <Chip
               variant="combined"
-              color={color}
+              style={{ color: "#333652" }}
               icon={
                 <>
                   {!isLoss && (
                     <RiseOutlined
-                      style={{ fontSize: "0.75rem", color: "inherit" }}
+                      style={{ fontSize: "0.75rem", color: "#333652" }}
                     />
                   )}
                   {isLoss && (
                     <FallOutlined
-                      style={{ fontSize: "0.75rem", color: "inherit" }}
+                      style={{ fontSize: "0.75rem", color: "red" }}
                     />
                   )}
                 </>
               }
               label={`${percentage}%`}
-              sx={{ ml: 1.25, pl: 1 }}
+              sx={{ ml: 1.25, pl: 1, backgroundColor: "#FAD02C" }}
               size="small"
             />
           </Grid>
@@ -63,8 +65,7 @@ const AnalyticEcommerce = ({
         <Typography
           component="span"
           variant="caption"
-          sx={{ color: `${color || "primary"}.main` }}
-        >
+          sx={{ color: "#333652" }}>
           {extra}
         </Typography>{" "}
         this year
@@ -83,7 +84,7 @@ AnalyticEcommerce.propTypes = {
 };
 
 AnalyticEcommerce.defaultProps = {
-  color: "primary",
+  color: "#333652",
 };
 
 export default AnalyticEcommerce;

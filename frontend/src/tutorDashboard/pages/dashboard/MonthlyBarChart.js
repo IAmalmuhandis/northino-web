@@ -60,7 +60,7 @@ const MonthlyBarChart = () => {
     useEffect(() => {
         setOptions((prevState) => ({
             ...prevState,
-            colors: [info],
+            colors: ["#333652"],
             xaxis: {
                 labels: {
                     style: {

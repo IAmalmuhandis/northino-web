@@ -1,3 +1,5 @@
+/** @format */
+
 import { useState } from "react";
 
 // material-ui
@@ -76,7 +78,9 @@ const DashboardDefault = () => {
     <Grid container rowSpacing={4.5} columnSpacing={2.75}>
       {/* row 1 */}
       <Grid item xs={12} sx={{ mb: -2.25 }}>
-        <Typography variant="h5">Dashboard</Typography>
+        <Typography style={{ color: "#333652" }} variant="h5">
+          Dashboard
+        </Typography>
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <AnalyticEcommerce title="Total Students" count="4,42,236" />
@@ -113,17 +117,15 @@ const DashboardDefault = () => {
               <Button
                 size="small"
                 onClick={() => setSlot("month")}
-                color={slot === "month" ? "primary" : "secondary"}
-                variant={slot === "month" ? "outlined" : "text"}
-              >
+                style={{ color: "#333652" }}
+                variant={slot === "month" ? "outlined" : "text"}>
                 Month
               </Button>
               <Button
                 size="small"
                 onClick={() => setSlot("week")}
-                color={slot === "week" ? "primary" : "secondary"}
-                variant={slot === "week" ? "outlined" : "text"}
-              >
+                style={{ color: "#333652" }}
+                variant={slot === "week" ? "outlined" : "text"}>
                 Week
               </Button>
             </Stack>
@@ -145,10 +147,12 @@ const DashboardDefault = () => {
         <MainCard sx={{ mt: 2 }} content={false}>
           <Box sx={{ p: 3, pb: 0 }}>
             <Stack spacing={2}>
-              <Typography variant="h6" color="textSecondary">
+              <Typography variant="h6" style={{ color: "#333652" }}>
                 This Week Statistics
               </Typography>
-              <Typography variant="h3">N70,650</Typography>
+              <Typography variant="h3" style={{ color: "#333652" }}>
+                N70,650
+              </Typography>
             </Stack>
           </Box>
           <MonthlyBarChart />
@@ -204,8 +208,7 @@ const DashboardDefault = () => {
               onChange={(e) => setValue(e.target.value)}
               sx={{
                 "& .MuiInputBase-input": { py: 0.5, fontSize: "0.875rem" },
-              }}
-            >
+              }}>
               {status.map((option) => (
                 <MenuItem key={option.value} value={option.value}>
                   {option.label}
@@ -245,16 +248,14 @@ const DashboardDefault = () => {
                   position: "relative",
                 },
               },
-            }}
-          >
+            }}>
             <ListItemButton divider>
               <ListItemAvatar>
                 <Avatar
                   sx={{
                     color: "success.main",
                     bgcolor: "success.lighter",
-                  }}
-                >
+                  }}>
                   <TransactionOutlined />
                 </Avatar>
               </ListItemAvatar>
@@ -283,8 +284,7 @@ const DashboardDefault = () => {
                   sx={{
                     color: "success.main",
                     bgcolor: "success.lighter",
-                  }}
-                >
+                  }}>
                   <TransactionOutlined />
                 </Avatar>
               </ListItemAvatar>
@@ -313,8 +313,7 @@ const DashboardDefault = () => {
                   sx={{
                     color: "success.main",
                     bgcolor: "success.lighter",
-                  }}
-                >
+                  }}>
                   <TransactionOutlined />
                 </Avatar>
               </ListItemAvatar>
@@ -354,8 +353,7 @@ const DashboardDefault = () => {
               </Grid>
               <Grid item>
                 <AvatarGroup
-                  sx={{ "& .MuiAvatar-root": { width: 32, height: 32 } }}
-                >
+                  sx={{ "& .MuiAvatar-root": { width: 32, height: 32 } }}>
                   <Avatar alt="Remy Sharp" src={avatar1} />
                   <Avatar alt="Travis Howard" src={avatar2} />
                   <Avatar alt="Cindy Baker" src={avatar3} />
@@ -365,8 +363,7 @@ const DashboardDefault = () => {
             <Button
               size="small"
               variant="contained"
-              sx={{ textTransform: "capitalize" }}
-            >
+              sx={{ textTransform: "capitalize" }}>
               Need Help?
             </Button>
           </Stack>

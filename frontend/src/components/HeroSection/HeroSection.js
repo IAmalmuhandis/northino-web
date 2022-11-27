@@ -1,3 +1,5 @@
+/** @format */
+
 import classes from "./_heroSection.module.scss";
 import SubHomeHeroSection from "./SubHomeHeroSection";
 import "../../base/_utilities.scss";
@@ -38,12 +40,14 @@ const HeroSection = (props) => {
             : props.pageNo === "13"
             ? classes.header__13
             : classes.header__14)
-        }
-      >
-        <h2 className="heading-primary--main">{props.mainHeader}</h2>
+        }>
+        <h2 className="heading-primary--main">
+          <span>{props.mainHeaderPart1}</span>
+          <span style={{ color: "#FAD02C" }}>{props.mainHeaderPart2}</span>
+        </h2>
         <h4 className="heading-primary--sub">{props.subHeader}</h4>
       </div>
-      {props.mainHeader === "northino" ? <SubHomeHeroSection /> : ""}
+      {props.mainHeaderPart1 === "north" ? <SubHomeHeroSection /> : ""}
     </section>
   );
 };

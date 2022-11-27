@@ -1,3 +1,5 @@
+/** @format */
+
 import { Routes, Route } from "react-router-dom";
 import { lazy } from "react";
 import Home from "./pages/Home";
@@ -56,7 +58,7 @@ const AdminManageCourses = Loadable(
 );
 // render - subsriptions
 const RecievedPayments = Loadable(
-  lazy(() => import("./tutorDashboard/pages/recievedPayments/RecievedPayments"))
+  lazy(() => import("./tutorDashboard/pages/recievedPayments/recievedPayments"))
 );
 // render - subsriptions Admin
 const AdminRecievedPayments = Loadable(

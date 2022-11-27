@@ -1,3 +1,5 @@
+/** @format */
+
 @import "../../abstracts/mixins";
 @import "../../abstracts/variables";
 .header {
@@ -16,8 +18,8 @@
   &__1 {
     background-image: linear-gradient(
         to right,
-        rgba($color-tertiary, 0.9),
-        rgba($color-tertiary, 0.9)
+        rgba($color-white, 0.9),
+        rgba($color-white, 0.9)
       ),
       url("../../img/northinoLogo.png");
   }
