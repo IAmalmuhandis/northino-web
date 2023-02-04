@@ -16,11 +16,14 @@ const SubHomeHeroSection = () => {
           Welcome to Northino
         </h3>
         <p className="paragraph">
-          Welcome to Northino, the advanced E-learning platform paving the way
-          to the future. We are a team of like-minded and determined
-          individuals, all sharing a vision for success. We believe that our
-          sophisticated technology has the potential to become an industry
-          sensation. Would you like to find out more? Explore our website today.
+          {/* Welcome to Northino, the advanced E-learning platform paving the way */}
+          {/* to the future. We are a team of like-minded and determined */}
+          {/* individuals, all sharing a vision for success. We believe that our */}
+          {/* sophisticated technology has the potential to become an industry */}
+          {/* sensation. Would you like to find out more? Explore our website today. */}
+          Welcome to Northino<br /> An E-learning platform paving the way to the future. We are 
+          Providing tech-focused video contents in Hausa Language and One on One Mentorship feature, Allowing youths to have access digital
+          skills and get access to digital jobs.
         </p>
         <h3
           className={
